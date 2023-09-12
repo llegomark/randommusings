@@ -37,7 +37,7 @@ This letter is not just a collection of words inked on paper; it is a part of my
 
 In life's symphony, you're the sweetest note, Desmond, and I can't wait to see the music you'll create.
 
-In love, hope, and dreams for a beautiful future,
+In love, hope, and dreams for a ['beautiful future'](https://llego.dev/posts/basey-samar/),
 
 Papa.
 

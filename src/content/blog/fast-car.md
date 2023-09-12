@@ -17,7 +17,7 @@ Seated in the chaotic yet familiar quietude of our shanty in the heart of the Ph
 
 Growing up silhouetted by the intergenerational shadow of poverty, life was an everyday struggle. Raised by my brave single mother and my equally resilient grandparents, every day was a fight for survival, a story of fleeting happiness amidst sacrificing and scrimping. Tears were our night companions, accompanied by dreams of a brilliant dawn.
 
-Fatherlessness marked my formative years. The fleeting fantasies of a nurturing father-son relationship were only interrupted by the crushing truth - he wasn't there. It felt like I was in a perpetual state of missing a vital piece of my identity jigsaw.
+Fatherlessness marked my formative years. The fleeting fantasies of a nurturing ['father-son relationship'](https://llego.dev/posts/gun-ownership/) were only interrupted by the crushing truth - he wasn't there. It felt like I was in a perpetual state of missing a vital piece of my identity jigsaw.
 
 When I met my father at 19, it was a reunion soaked in silent tears. That day, my world expanded to include a sister and two brothers I never knew I had. Yet, the void left by his absence through my childhood remained gaping. After realizing I was soon to be a father myself — to my beautiful children, Argi Denise and Desmond Grey — my prayers were tinged with an urgent plea; I wished to be the father I never had.
 

@@ -7,7 +7,7 @@ export const SITE: Site = {
   title: "markllego",
   ogImage: "8cef457e-9c69-43ce-a1ff-33799ee92efc.jpg",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 5,
   webTitle: "Mark Anthony Llego",
 };
 

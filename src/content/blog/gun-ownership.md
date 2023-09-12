@@ -11,13 +11,11 @@ ogImage: "https://llego.dev/assets/ff0fc6d5-1323-4ad2-a972-aa2c496bee88.jpg"
 description: Explore the personal journey of a Filipino father and gun owner. Delve into the challenges and responsibilities of legal firearm ownership in the Philippines, societal reactions, and the transformation it brings amidst a family-centric narrative. An introspective look into the world of gun ownership.
 ---
 
-## Table of Contents
-
-Guns, to a great many people, seem a polarising topic. They have been vilified, glorified, and in many cases, mystified. Growing up, I was aware of their contentious nature, their power, and the profound responsibility they carry. Today, as a Filipino male and a father of two, I find myself part of the narrative that surrounds firearms – and I'm a proud gun owner.
+Guns, to a great many people, seem a polarising topic. They have been vilified, glorified, and in many cases, mystified. Growing up, I was aware of their contentious nature, their power, and the profound responsibility they carry. Today, as a responsible adult and a ['father of two'](https://llego.dev/posts/open-letter-son/), I find myself part of the narrative that surrounds firearms – and I'm a proud gun owner.
 
 ## Inherited Resolve
 
-My roots mirror my present in a peculiar way. My father was an Army man, a firm emblem of discipline, and staunchness, one who knew the weight a gun carries – a weight I now bear. My elder brother followed our father's footsteps, taking up arms to serve our beloved country. Yet, despite these strong military connections, the path to gun ownership was not predestined for me.
+My roots mirror my present in a peculiar way. My father was an Army man, a firm emblem of discipline, and staunchness, one who knew the weight a gun carries – a weight I now bear. My younger half-brother followed our father’s footsteps, taking up arms to serve our beloved country. Yet, despite these strong military connections, the path to gun ownership was not predestined for me.
 
 You see, my father made his exit from my life before I even had a chance to know him. He was but a ghost from the past, a whisper in the wind that occasionally flaunted his presence in the reflected traits we shared. But he also left behind a stirring curiosity about firearms – one I had to navigate on my own, and ultimately, it has led me here.
 
@@ -29,7 +27,7 @@ My choice to become a gun owner wasn't spontaneous but a thoughtful decision mad
 
 ![Gun Ownership](https://llego.dev/assets/6746889185349593.jpg)
 
-Once my mind was made up, it was time to plod through the intricate labyrinth of legal procedures. In the Philippines, owning a firearm is a sternly-regulated affair: you need a License to Own and Possess Firearms (LTOPF) and, in my case, also a Permit to Carry Firearms Outside of Residence (PTCFOR). The process was taxing, and the requirements – including the psychological tests and police checks – were stringent and meticulous. But I took it as a reflection of the grave responsibility that was going to be mine.
+Once my mind was made up, it was time to plod through the intricate labyrinth of legal procedures. In the Philippines, owning a firearm is a sternly-regulated affair: you need a ['License to Own and Possess Firearms (LTOPF)'](https://www.feo-system.com/) and, in my case, also a Permit to Carry Firearms Outside of Residence (PTCFOR). The process was taxing, and the requirements – including the psychological tests and police checks – were stringent and meticulous. But I took it as a reflection of the grave responsibility that was going to be mine.
 
 Armed with my LTOPF and my PTCFOR, I legally became a part of the global tribe of gun owners. Yet, it wasn't just about being locked and loaded. It was also about being mentally prepared and conscious of the shifting sands under my life.
 
@@ -52,6 +50,6 @@ But I stood my ground, firm in my decision and clear about my intentions. I had 
 
 ## The Road Ahead
 
-This is my story – as a Filipino, as a man, as a father, and most certainly, as a gun owner. My journey has been less about the destination and more about the transformation – the evolution of a person learning to bear the enormous cross of responsibility. I have grappled with societal judgment, familial concerns, and my internal contemplations, only to emerge more introspective, more centered.
+This is my story – as an individual, as a man, as a father, and most certainly, as a gun owner. My journey has been less about the destination and more about the transformation – the evolution of a person learning to bear the enormous cross of responsibility. I have grappled with societal judgment, familial concerns, and my internal contemplations, only to emerge more introspective, more centered.
 
 To those who share this experience or are inching towards it, remember this – the path of gun ownership is as much about power as it is about restraint. It is about vigilance and discipline, an unspoken commitment to safety. We bear a formidable weight, but remember, we do so locked, loaded, and prepared.
