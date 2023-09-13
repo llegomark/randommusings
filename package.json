@@ -18,7 +18,7 @@
   "dependencies": {
     "@astrojs/rss": "^3.0.0",
     "@resvg/resvg-js": "^2.4.1",
-    "astro": "^3.0.12",
+    "astro": "^3.0.13",
     "fuse.js": "^6.6.2",
     "github-slugger": "^2.0.0",
     "remark-collapse": "^0.1.2",
@@ -35,7 +35,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@types/github-slugger": "^2.0.0",
     "@types/react": "^18.2.21",
-    "@typescript-eslint/parser": "^6.6.0",
+    "@typescript-eslint/parser": "^6.7.0",
     "astro-eslint-parser": "^0.15.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",

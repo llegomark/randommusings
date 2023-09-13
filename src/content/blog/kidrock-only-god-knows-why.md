@@ -1,6 +1,6 @@
 ---
 author: Mark Anthony Llego
-pubDatetime: 2022-09-11T15:11:18Z
+pubDatetime: 2023-09-11T11:11:11Z
 title: "Embracing My Story: How One Song Became My Lifeline"
 postSlug: kidrock-only-god-knows-why
 featured: true
@@ -33,4 +33,7 @@ Life is a complex web of realities. My reality isn't one that you might consider
 
 But until then, Kid Rock’s soulful melody serenades my solitude, reminding me that my weary spirit isn't alone in its struggles. That through it all, there's a peculiar strength that resides in the depth of my being… and only God knows why. Only god knows why we journey through the darkest valleys, what we're meant to discover, or when the sun will shine again.
 
-For now, I'll find my calm in the chaos, embrace my battles and carry the weight, hoping that someday, I'll understand why - why ['my journey'](https://llego.dev/posts/fast-car/) is paved with these trials, and what lies beyond this enduring night. Until then, I’ll navigate these churning waters, humming along _"Take me to the river, ey… Won't you take me to the river, hey, hey, yeah…"_
+![Mount Pulag](https://llego.dev/assets/GK8wjSy6QnYnUR6jeRHVwBG.jpg)
+![Buscalan Village](https://llego.dev/assets/f7uahrN5hs8dn3GHCY9mymS.jpg)
+
+For now, I’ll continue to find tranquility in the surrounding tumult, embrace the challenges that life throws at me, and shoulder the burdens that come my way. I carry the hope of someday understanding why life has cast these trials upon ['my journey'](https://llego.dev/posts/fast-car/), and what secrets the universe may reveal upon the lifting of the veil of night. As I steer my vessel through these turbulent seas, I find resonance and comfort in Kid Rock's lyrics, _"Take me to the river, ey… Won't you take me to the river, hey, hey, yeah…"_
