@@ -7,10 +7,11 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://llego.dev/",
-  scopedStyleStrategy: "where",
   integrations: [
     tailwind({
-      applyBaseStyles: false,
+      config: {
+        applyBaseStyles: false,
+      },
     }),
     react(),
     sitemap(),
@@ -36,4 +37,5 @@ export default defineConfig({
       exclude: ["@resvg/resvg-js"],
     },
   },
+  scopedStyleStrategy: "where",
 });

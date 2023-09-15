@@ -3,7 +3,6 @@
   "compilerOptions": {
     "baseUrl": "src",
     "jsx": "react-jsx",
-    "moduleResolution": "bundler",
     "paths": {
       "@assets/*": ["assets/*"],
       "@config": ["config.ts"],

@@ -3,7 +3,7 @@ author: Mark Anthony Llego
 pubDatetime: 2023-09-15T01:12:18Z
 title: "Echoes of My Evolution: A Dance with Inner Demons"
 postSlug: echoes-evolution-dance-inner-demons
-featured: false
+featured: true
 draft: false
 tags:
   - personal
@@ -36,5 +36,6 @@ As the echoes of "Losing My Religion" receded, mingling with the hum of conversa
 I am a man unmade and remade, spun from threads of hardship, resilience, and revelation. Anchored in my newfound faith, my song now sings of a battle won, and an identity redeemed. Amid the cacophonous symphony of life, I stand poised, belting out my own melody, shaping my own words, remaining fiercely, unapologetically me.
 
 ![Mark Anthony Llego](https://llego.dev/assets/KndnK3VJuNBu6gC2B53N.jpg)
+
 > Through the cacophony of life's symphony, amidst the tempest of self-doubt and existential crises, I became a courageous maestro of my own melody—bruised, yet unbowed; fractured, yet unbroken. For in facing my demons, I was reborn, not lost within the clamor, but found in the silence of authenticity.
-**- Mark Anthony Llego**
+> **- Mark Anthony Llego**
