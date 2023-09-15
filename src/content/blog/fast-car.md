@@ -27,7 +27,7 @@ Though my childhood memories are cluttered with unfulfilled desires, my mother, 
 
 Now, with every scrap of resource I save, I strive to provide my progeny a beacon of hope - quality education. It fills me with indescribable pride to see Argi and Desmond attend a private school, their eyes shining with intelligence and innocence.
 
-The strains of debt and the persistence of poverty often catalyze my depression. The challenging rope walk between providing for my family and battling my incessant inner demons often hurts like a tight knot in my chest. But these trials are not the entirety of my existence, and they don't get to decide my narrative.
+The strains of debt and the persistence of poverty often catalyze my depression. The challenging rope walk between providing for my family and battling my ['incessant inner demons'](https://llego.dev/posts/echoes-evolution-dance-inner-demons/) often hurts like a tight knot in my chest. But these trials are not the entirety of my existence, and they don't get to decide my narrative.
 
 I may have been born on September 11, 1991, but that date doesn’t define me. Today, I stand on the precipice of middle-age crisis, understanding that though trapped in a socioeconomic cage, my dreams are unfettered. I still wrestle with the demons of poverty, depression, and debt, yet, every day, I make the choice to rise again.
 

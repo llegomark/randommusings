@@ -25,7 +25,7 @@ I want you to remember, as the haunting lyric goes, "lights will guide you home.
 
 There's an extraordinary courage that comes from admitting when we need help. Mark, in those moments, I want to be there for you. I want to try to "fix" you, not because you're broken, but because you're deserving of love and healing.
 
-But remember, too, how important it is to also let go. It could be high up above or deep down below, you might find yourself clinging tightly to the things and people you love. Sometimes, it's hard to loosen that grip. But, as Coldplay sings, "if you never try, you'll never know, just what you're worth." Letting go isn't about losing, it's about discovering your inherent value, independent of anything else.
+But remember, too, how important it is to also let go. It could be high up above or deep down below, you might find yourself clinging tightly to the things and people you love. Sometimes, it's hard to loosen that grip. But, as Coldplay sings, "if you never try, you'll never know, just what you're worth." Letting go isn't about losing, it's about discovering your ['inherent value'](https://llego.dev/posts/echoes-evolution-dance-inner-demons/), independent of anything else.
 
 Tears may stream down your face, but know that each tear is a reminder not of defeat, but of your human capacity to feel, to love, and to grow. I promise you, I, too, will learn from my mistakes. I will strive to offer you a better version of myself each time.
 

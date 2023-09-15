@@ -23,7 +23,7 @@ Music, I found, wasn't a mere pairing of melody and rhythm; it was a living, bre
 
 I remember once, sitting in a sun-dappled park, headphones in, allowing the vibrant sounds of Jimmy Cliff's ['You Can Get It If You Really Want'](https://www.youtube.com/watch?v=U7dBMYUyRAQ) to soak in. Each beat was a pulse of determination, each lyric a mantra of resilience, coloring my own aspirations with newfound vibrancy. Riding the highs and lows of this song, my spirit soared, humming along to the rhythm of perseverance and hope.
 
-Music has been my failsafe, my rawer than raw form of self-expression. Amidst the clamor of everyday life, amidst the orchestrated chaos, it has been a mirror that reflects more than just a semblance; it encapsulates my soul's unique melody, the distinct rhythm of my persona. It allowed me to project my unvoiced thoughts, my unattended emotions, and my unexplored desires into the world.
+['Music has been my failsafe,'](https://llego.dev/posts/echoes-evolution-dance-inner-demons/) my rawer than raw form of self-expression. Amidst the clamor of everyday life, amidst the orchestrated chaos, it has been a mirror that reflects more than just a semblance; it encapsulates my soul's unique melody, the distinct rhythm of my persona. It allowed me to project my unvoiced thoughts, my unattended emotions, and my unexplored desires into the world.
 
 A song, a melody, a rhythm—they're not just strings of notes. Each one of them is representative of an emotion, an echo of past experiences, a portal into the deepest corners of my self. And through them, I've found a voice, an outlet able to convey what words often fail to capture.
 
