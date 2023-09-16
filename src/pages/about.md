@@ -5,7 +5,7 @@ title: "About"
 
 ![Mark](https://llego.dev/assets/SS6V8tptipaeTw27R8mXAUd.jpg)
 
-Hello! Welcome to my world. I'm Mark Anthony Llego, a seasoned ['software engineer'](https://github.com/llegomark) at the crossroads of coding and living. I've channeled my long-standing fascination with artificial intelligence, specifically in natural language processing and large language models, into a career dedicated to creating intelligent solutions poised to reshape our daily experiences.
+Hello! Welcome to my world. I'm Mark Anthony Llego, a seasoned ['freelance software engineer'](https://github.com/llegomark) at the ['crossroads of coding and living'](https://llego.dev/posts/strumming-strings-survival-freelancers-echo-gallows-pole/). I've channeled my long-standing fascination with artificial intelligence, specifically in natural language processing and large language models, into a career dedicated to creating intelligent solutions poised to reshape our daily experiences.
 
 Skilled in Python and JavaScript, I develop innovative applications powered by the might of machine learning and neural networks. Utilizing modern web development frameworks and implementing SEO best practices, I stride confidently at the forefront of the software universe, pushing its boundaries.
 

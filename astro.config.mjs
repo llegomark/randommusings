@@ -9,9 +9,7 @@ export default defineConfig({
   site: "https://llego.dev/",
   integrations: [
     tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
+      applyBaseStyles: false,
     }),
     react(),
     sitemap(),
