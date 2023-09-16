@@ -5,32 +5,52 @@ title: "About"
 
 ![Mark](https://llego.dev/assets/SS6V8tptipaeTw27R8mXAUd.jpg)
 
-Hello! Welcome to my world. I'm Mark Anthony Llego, a seasoned ['freelance software engineer'](https://github.com/llegomark) at the ['crossroads of coding and living'](https://llego.dev/posts/strumming-strings-survival-freelancers-echo-gallows-pole/). I've channeled my long-standing fascination with artificial intelligence, specifically in natural language processing and large language models, into a career dedicated to creating intelligent solutions poised to reshape our daily experiences.
+## Hello! Welcome
 
-Skilled in Python and JavaScript, I develop innovative applications powered by the might of machine learning and neural networks. Utilizing modern web development frameworks and implementing SEO best practices, I stride confidently at the forefront of the software universe, pushing its boundaries.
+You've landed in my world, and I am Mark Anthony Llego, standing at the exciting crossroads of coding and life. I am a freelance software engineer, blending my passion for artificial intelligence, specifically natural language processing, and large language models into a career aimed at transforming everyday experiences.
 
-Syncing my strides with the dynamic evolution of technology, I immerse myself in the latest breakthroughs in AI-related fields. My broad experience with natural language processing, image and speech recognition, and various AI-driven applications underline my commitment and curiosity in this expansive domain.
+## On Professional Front
 
-But there's more to me than code and algorithms. My blog reveals a vivid kaleidoscope of my thoughts, insights, and adventures. It's a platform where I paint a vibrant joie de vivre, sprinkled with wit and humor. Fasten your seatbelts, as we embark on an unpredictable journey across the whimsical and intriguing landscape of my mind!
+- Skilled in an array of programming languages, including Python, JavaScript, TypeScript, and HTML5, I've honed the skills to develop smart, data-intensive applications.
+- Utilizing libraries and frameworks like React.js, Redux, Next.js, Node.js, ExpressJS, Django, and Flask, I have the versatility to craft varied web applications, each tailored to its unique requirements.
+- My experience with database management ranges from SQL-based systems, such as SQLite and MySQL, to NoSQL solutions like MongoDB and Firebase, enabling the handling of diverse data structures.
+- I work comfortably with machine learning libraries such as PyTorch and Scikit-Learn, bringing innovative solutions in Machine Learning, Deep Learning, and Natural Language Processing to life.
+- Adept at deploying CSS preprocessors like SASS, and utility-first CSS frameworks like Tailwind CSS, I shape aesthetic and responsive web designs.
+- Applying SEO best practices and speed enhancement techniques, my proficiency with WordPress and hosting services like Google Cloud ensure optimized visibility and user experience.
+- Experienced with Jupyter Notebook and Google Colab, I create and share documents that contain live code, visualizations and narrative text - essential for data cleaning and transformation, numerical simulations, statistical modeling, and machine learning.
+- Familiar with Git for version control, I streamline processes and collaborations, maintaining high efficiency in my workflow.
+- Proficient in developing and maintaining APIs, paving the way for seamless integration and communication between different software components.
+- Acquainted with cloud services such as AWS, Google Cloud, and Azure, I manage large datasets, efficiently deploying models in alignment with the rapidly evolving tech sphere.
+- Securing and optimizing performance of websites using Cloudflare, my sites consistently secure high-ranking search results.
 
-Beyond the digital realm, I unplug to delve into the virtual world of Ragnarok M: Eternal Love, a different kind of passion tracing back to my high school days. An ardent supporter of former Vice President Maria Leonor "Leni" Gerona Robredo, I stand by her forward-looking vision for our nation.
+## A Window To My Mind
 
-Above all, my most cherished roles are those of a father to my wonderful children, Desmond Grey and Argi Denise, and supportive husband to my wife, Arlene. Balancing the wonders of tech, the ['allure of gaming'](https://llego.dev/posts/kidrock-only-god-knows-why/), personal advocacy, and the warmth of family, my story is about bridging different worlds.
+But hey, I'm more than just code and algorithms! My blog is a canvas where I share my thoughts, adventures, sprinkled with wit and humour.
 
-So, welcome to my shared universe of technology, personal musings, and a heartwarming familial journey. A space where technical expertise, whimsical thoughts, and a fulfilling personal journey converge to create a truly unique experience.
+## Beyond Coding
 
-## Proactively Protecting Privacy: Access to My Professional Documents
+Stepping beyound the realm of bits and bytes, I am drawn to the virtual world of Ragnarok M: Eternal Love. Further, my heart beats for the forward-looking vision of former Vice President Maria Leonor “Leni” Gerona Robredo.
 
-Hello there,
+## My Pride and Joy
 
-I appreciate your interest in learning more about me and my professional accomplishments. As someone who honors privacy and digital footprint, please understand that my resume and portfolio are not publicly accessible.
+Amidst all the techno frenzy, I take immense pride in being a father to my wonderful children, Desmond Grey and Argi Denise, and a supportive husband to my wife, Arlene.
 
-I believe in being judicious when sharing aspects of my personal life online, limiting it to only provide a modest glimpse. My portfolio, carefully crafted to best demonstrate my skills, abilities, and experiences, is shared exclusively with companies and employers to whom I personally apply. This intentionality is mirrored in my philosophy of working with a focused, personalized approach in each professional endeavor I partake in.
+## Welcome Aboard
 
-Rest assured, I am more than willing to provide you with these requested materials should the right opportunity of collaboration arise.
+So here's to a joint voyage that weaves together technology, whimsical thoughts, and heartwarming family tales, stages where technical expertise, fanciful notions, and a fulfilling personal life intersect.
 
-Thank you once again for expressing interest in my work. If you find my approach aligns with yours, I am only one conversation away from revealing my professional persona in more detail.
+## Protecting Privacy & Open to Opportunities
 
-Best Regards,
+While I highly regard privacy and maintain a sensible digital footprint, I understand the importance of accessibility when it comes to professional engagements. Therefore, while my resume and portfolio aren't publicly accessible, they are readily shared with interested parties aligned with potential opportunities.
 
-Mark
+In addition to my regular pursuits, I'm also available for freelance projects. If you're interested in collaborating or need expert assistance with your project, feel free to reach out! You can easily contact me via email at [markllego@gmail.com](mailto:markllego@gmail.com). Looking forward to the possibility of working together to create intelligent, innovative solutions.
+
+## Pricing for Freelance Services
+
+Understanding the value of transparent pricing, I provide an estimated range for my freelance services. The rates are flexible and depend on the project scope, complexity, and timeline.
+
+- **Basic Projects**: Starting from Php 1,200.00 per hour/project. Ideal for smaller tasks such as fixing bugs, adding new features to existing projects, or small-scale web development.
+- **Intermediate Projects**: Starting from Php 2,300.00 per hour/project. Suited for more complex tasks, including full-stack web development, AI model development, and larger bug fixes.
+- **Advanced Projects**: Starting from Php 4,000.00 per hour/project. Perfect for extensive projects that require a deep dive into advanced AI model development, intricate full-stack web application development, or large-scale optimization tasks.
+
+Please note that these prices are only baseline estimates. For precise quotes tailored to your specific needs, please get in touch at [markllego@gmail.com](mailto:markllego@gmail.com).

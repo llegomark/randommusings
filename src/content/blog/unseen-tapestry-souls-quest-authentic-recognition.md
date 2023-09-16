@@ -40,6 +40,11 @@ sample_df.to_csv('people.csv', index=False)
 ```
 
 ```python
+!pip install transformers
+
+import nltk
+nltk.download('vader_lexicon')
+
 from transformers import RobertaModel, RobertaTokenizer
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from sklearn.model_selection import train_test_split
@@ -49,59 +54,37 @@ from scipy import spatial
 import pandas as pd
 import torch
 
-# Models and preprocessing tools
 tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
 model = RobertaModel.from_pretrained('roberta-base')
 sia = SentimentIntensityAnalyzer()
 
 def get_roberta_embeddings(text):
-    # Tokenize input
     tokens = tokenizer.tokenize(text)
     encoded_input = tokenizer.convert_tokens_to_ids(tokens)
-
-    # Create attention mask
     attention_mask = torch.tensor([1]*len(encoded_input))
 
-    # Predict embeddings
     with torch.no_grad():
         last_hidden_state = model(torch.tensor([encoded_input]), attention_mask = torch.tensor([attention_mask]))
     return last_hidden_state[0].numpy().mean(axis=1)
 
-# Import the dataset
 df = pd.read_csv('people.csv')
-
-# Personal narratives (we will convert to BERT embeddings)
 narratives = df['Narrative'].values
-
-# Initialize list to store embeddings
 embeddings = []
 
 for narrative in narratives:
     embeddings.append(get_roberta_embeddings(narrative))
 
-# Compute Sentiment score to each narrative
 df['Sentiment'] = df['Narrative'].apply(lambda narrative: sia.polarity_scores(narrative)['compound'])
-
-# Create new DataFrame with embeddings
 df_emb = pd.DataFrame(embeddings)
 df_features = pd.concat([df[['Love_for_Music', 'Depth_of_Emotions', 'Pain_Endured', 'Bravery', 'Persistence']], df_emb, df['Sentiment']], axis=1)
 
-# Target
 Y = df['Understood']
-
-# Split the dataset into training and test set
 X_train, X_test, Y_train, Y_test = train_test_split(df_features, Y, test_size = 0.2, random_state = 42)
 
-# We are using RandomForest classifier here
 model = RandomForestClassifier()
-
-# Train the classifer
 model.fit(X_train, Y_train)
-
-# Predict the test set results
 Y_pred = model.predict(X_test)
 
-# Evaluate the model
 cm = confusion_matrix(Y_test, Y_pred)
 accuracy = accuracy_score(Y_test, Y_pred)
 
@@ -130,4 +113,4 @@ Every locked gaze feels like a chance for discovery, a possibility. I search for
 
 But until I find that recognition, until the words, ‘I see you’ are etched in someone's gaze, I will continue painting my emotions on the ['canvas of solitude'](https://llego.dev/posts/echoes-solitude-journey-self-discovery/), carving my dreams on the stones of silence, longing for the day when someone shatters through the soundless echo of my solitary heart – wishing to truly understand, wishing to meet my eyes and see who I am, unmasked and unrestrained.
 
-As 'Iris' echoes in the stillness, I'm left to hope that there's a melody strong enough, a sight clear enough, a love brave enough, to discern the true narrative of my life.
+As 'Iris' echoes in the stillness, I'm left to hope that there's a melody strong enough, a sight clear enough, a love brave enough, to discern the ['true narrative of my life'](https://llego.dev/posts/silent-symphony-alienation-tale-self-acceptance/).
