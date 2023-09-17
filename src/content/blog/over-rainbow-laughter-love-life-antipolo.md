@@ -19,19 +19,22 @@ import matplotlib.pyplot as plt
 from typing import Dict, List, Union
 
 # Constants
-INTENSITY_HIGH = 10
-INTENSITY_LOW = 0
+MIN_EMOTION_INTENSITY = 0
+MAX_EMOTION_INTENSITY = 10
 DAY_HOURS = 24
+
 
 class EmotionModel:
     """
-    Class EmotionModel simulates the emotional model of a being with certain attributes,
-    feelings, and desires.
+    Class EmotionModel simulates the emotional model of a being with certain attributes, feelings, and desires.
     """
 
     @staticmethod
-    def _clamp_emotion(intensity: float):
-        return max(INTENSITY_LOW, min(INTENSITY_HIGH, intensity))
+    def clamp_emotion(intensity: float) -> float:
+        """
+        Clamp the emotion intensity between the minimum and maximum values.
+        """
+        return max(MIN_EMOTION_INTENSITY, min(MAX_EMOTION_INTENSITY, intensity))
 
     def __init__(self, resilience: int = 2, sensitivity: int = 1, optimism: int = 3):
         self.attributes = {"resilience": resilience, "sensitivity": sensitivity, "optimism": optimism}
@@ -43,31 +46,30 @@ class EmotionModel:
         """
         Initializes feelings and desires to initial random values.
         """
-        feelings_keys = ["doubt", "fear", "rejection", "joy", "excitement", "sadness", "anger", "irritation", "stress", "calm", "love", "loneliness", "concern", "pride","disappointment"]
+        feelings_keys = ["doubt", "fear", "rejection", "joy", "excitement", "sadness", "anger", "irritation", "stress", "calm", "love", "loneliness", "concern", "pride", "disappointment", "surprise", "disgust", "anticipation", "trust", "envy", "guilt"]
         desires_keys = ["acceptance", "belonging", "recognition", "achievement"]
         self.feelings = {key: random.uniform(5, 15) for key in feelings_keys}
         self.desires = {key: random.uniform(5, 15) for key in desires_keys}
 
     def init_over_time(self, indicator: Dict[str, float]) -> Dict[str, List[float]]:
         """
-        Initialize the time series result of an indicator with its initial value
+        Initialize the time series result of an indicator with its initial value.
         """
         return {key: [value] for key, value in indicator.items()}
 
     def calc_delta_and_update(self, indicators: Dict[str, float], attr_mod: int, over_time: Dict[str, List[float]]):
         """
-        Calculates new values for each indicator, update their current state and store the
-        outcome to their time series.
+        Calculates new values for each indicator, updates their current state, and stores the outcome to their time series.
         """
         delta = random.gauss(0, attr_mod)
         noise = random.uniform(-1, 1)
         for key, intensity in indicators.items():
-            indicators[key] = EmotionModel._clamp_emotion(intensity + delta + noise)
+            indicators[key] = EmotionModel.clamp_emotion(intensity + delta + noise)
             over_time[key].append(indicators[key])
 
     def feel(self, time: int):
         """
-        Simulate feelings and their change over time
+        Simulates feelings and their change over time.
         """
         attr_mod = self.attributes["resilience"] if self.feelings["fear"] < 5 else self.attributes["sensitivity"]
         self.calc_delta_and_update(self.feelings, attr_mod, self.feelings_over_time)
@@ -81,14 +83,14 @@ class EmotionModel:
 
     def apply_feeling_effect(self, feeling_effect: Dict[str, float]):
         """
-        Change feelings according to some particular feeling_effect
+        Changes feelings according to a particular feeling_effect.
         """
         for feeling, effect in feeling_effect.items():
-            self.feelings[feeling] = EmotionModel._clamp_emotion(self.feelings[feeling] + effect)
+            self.feelings[feeling] = EmotionModel.clamp_emotion(self.feelings[feeling] + effect)
 
     def desire(self):
         """
-        Simulate desires and their change over time
+        Simulates desires and their change over time.
         """
         attr_mod = self.attributes["optimism"] if self.desires["acceptance"] < 5 else -self.attributes["resilience"]
         self.calc_delta_and_update(self.desires, attr_mod, self.desires_over_time)
@@ -101,22 +103,22 @@ class EmotionModel:
         positive_feelings = ["joy", "excitement"]
         negative_feeling = random.choice(negative_feelings)
         positive_feeling = random.choice(positive_feelings)
-        self.feelings[negative_feeling] = EmotionModel._clamp_emotion(self.feelings[negative_feeling] + random.uniform(0, 2))
-        self.feelings[positive_feeling] = EmotionModel._clamp_emotion(self.feelings[positive_feeling] - random.uniform(0, 2))
+        self.feelings[negative_feeling] = EmotionModel.clamp_emotion(self.feelings[negative_feeling] + random.uniform(0, 2))
+        self.feelings[positive_feeling] = EmotionModel.clamp_emotion(self.feelings[positive_feeling] - random.uniform(0, 2))
         self.feelings_over_time[negative_feeling].append(self.feelings[negative_feeling])
         self.feelings_over_time[positive_feeling].append(self.feelings[positive_feeling])
 
     def update_feelings(self, emotion_changes: Dict[str, float]):
         """
-        Updates feelings according to some changes (common in interactions with other people)
+        Updates feelings according to some changes (common in interactions with other people).
         """
         for emotion, change in emotion_changes.items():
-            self.feelings[emotion] = EmotionModel._clamp_emotion(self.feelings[emotion] + change)
+            self.feelings[emotion] = EmotionModel.clamp_emotion(self.feelings[emotion] + change)
 
 
 class Human:
     """
-    A simple class to encapsulate common attributes & behaviours of Child and Partner classes
+    A simple class to encapsulate common attributes and behaviors of Child and Partner classes.
     """
 
     def __init__(self, name: str):
@@ -128,7 +130,7 @@ class Human:
 
     def random_event(self, emotions: List[str]):
         """
-        A random event that changes certain feelings a Human has
+        A random event that changes certain feelings a Human has.
         """
         emotion_changes = {emotion: random.uniform(-1, 1) for emotion in emotions}
         self.emotion_model.update_feelings(emotion_changes)
@@ -147,7 +149,7 @@ class Child(Human):
 class Partner(Human):
     """
     Partner, a type of Human, with a simple method to simulate a random event.
-    Also keeps track of availability with a boolean out_of_town
+    Also keeps track of availability with a boolean out_of_town.
     """
 
     def __init__(self, name: str):
@@ -167,7 +169,7 @@ class Behavior(ABC):
 
 class ConformingBehavior(Behavior):
     """
-    Type of Behavior where the individual does not change identity, hence conforms to the society
+    Type of Behavior where the individual does not change identity and hence conforms to the society.
     """
 
     def act(self, identity: List[str], society: 'Society') -> List[str]:
@@ -176,7 +178,7 @@ class ConformingBehavior(Behavior):
 
 class RebelliousBehavior(Behavior):
     """
-    Type of Behavior where the individual does not conform to the society, and changes their identity.
+    Type of Behavior where the individual does not conform to the society and changes their identity.
     """
 
     def act(self, identity: List[str], society: 'Society') -> List[str]:
@@ -197,7 +199,7 @@ class Society:
 
 class Individual:
     """
-    An Individual with certain identity and behavior.
+    An Individual with a certain identity and behavior.
     """
 
     def __init__(self, identity: List[str], behavior: 'Behavior'):
@@ -206,7 +208,7 @@ class Individual:
 
     def modify_behavior(self, new_behavior: 'Behavior'):
         """
-        Change behavior of an individual
+        Change the behavior of an individual.
         """
         self.behavior = new_behavior
 
@@ -226,7 +228,7 @@ class Individual:
 
 class Activity:
     """
-    Activity encapsulates a certain activity happening in a day, with starting and ending.
+    Activity encapsulates a certain activity happening in a day, with starting and ending times.
     """
 
     def __init__(self, name: str, start_time: int, end_time: int, feeling_effect: Dict[str, float] = None):
@@ -237,14 +239,14 @@ class Activity:
 
     def duration(self) -> int:
         """
-        Calculate duration of activity.
+        Calculate the duration of the activity.
         """
         return self.end_time - self.start_time
 
 
 class Weather:
     """
-    Weather class represents the daily weather, and its effect on the Individual.
+    Weather class represents the daily weather and its effect on the Individual.
     """
 
     def __init__(self, weather_type: str):
@@ -275,7 +277,7 @@ class Self:
 
     def child_events(self):
         """
-        Simulate events involving children, update their feelings and affect user's feelings
+        Simulate events involving children, update their feelings, and affect the user's feelings.
         """
         for child in self.children:
             child.random_event(['joy', 'sadness', 'anger'])
@@ -286,11 +288,11 @@ class Self:
 
     def partner_event(self):
         """
-        Simulate events involving partner, update their feelings and affect user's feelings
+        Simulate events involving the partner, update their feelings, and affect the user's feelings.
         """
         self.partner.random_event(['joy', 'concern', 'anger'])
         self.emotion_model.update_feelings(self.partner.emotion_model.feelings)
-        # Assuming being with partner makes you feel loved but less lonely
+        # Assuming being with the partner makes you feel loved but less lonely
         if not self.partner.out_of_town:
             self.emotion_model.feelings["love"] += 0.1
             self.emotion_model.feelings["loneliness"] -= 0.1
@@ -312,7 +314,7 @@ class DayInLife:
 
     def add_activity(self, activity: 'Activity'):
         """
-        Check if an activity fits into the day schedule. If yes, add to activities.
+        Check if an activity fits into the day schedule. If yes, add it to activities.
         """
         if self.available_hours - activity.duration() < 0:
             raise ValueError("Not enough time available for this activity.")
@@ -341,8 +343,8 @@ class DayInLife:
 
     def resist_conformity(self):
         """
-        Visualize human emotions, apply weather effect and other events (either normal or major)
-        throughout the 24 hours in a day.
+        Visualize human emotions, apply the weather effect, and other events (either normal or major)
+        throughout the 24 hours of a day.
         """
         self.self.child_events()
         self.self.partner_event()
@@ -356,7 +358,7 @@ class DayInLife:
             # Apply the weather effect
             if self.weather:
                 self.self.emotion_model.apply_feeling_effect(self.weather.get_weather_effect())
-            # Apply the effect of all activities happening at the hour
+            # Apply the effect of all activities happening at the current hour
             for activity in self.activities:
                 if activity.start_time <= i < activity.end_time and activity.feeling_effect:
                     self.self.emotion_model.apply_feeling_effect(activity.feeling_effect)
@@ -380,7 +382,7 @@ class Simulation:
 
     def run(self):
         """
-        Run simulation for all individuals.
+        Run the simulation for all individuals.
         """
         for individual in self.individuals:
             individual.resist_conformity()
@@ -416,9 +418,14 @@ if __name__ == "__main__":
     # Plot feelings over time
     keys = list(mark_day.self.emotion_model.feelings_over_time.keys())
     values = list(mark_day.self.emotion_model.feelings_over_time.values())
+
     for i in range(len(keys)):
         plt.plot(values[i], label=keys[i])
-    plt.legend()
+
+    plt.xlabel('Time')
+    plt.ylabel('Intensity')
+    plt.title('Feelings Over Time')
+    plt.legend(title='Feelings')
     plt.show()
     # Load the simulation state and print summary
     with open('day_in_life.pkl', 'rb') as file:
