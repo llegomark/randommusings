@@ -109,3 +109,22 @@ In my fervent dance with philosophy, I have stumbled, but also spun elegiac solo
 Antipolo, my quiet sanctuary, with its verdant hills whispering stories of yesteryears, becomes a poignant landscape mirroring my existential plight—a man aflame with questions, grappling with the might of life's enigmas in this vast celestial theater. Yet, I am but a solitary voice among billions.
 
 And thus, dear reader, invite you to echo your own dissonance, your hopes, fears, joy, and despair, in the vast theatre of existence. For it is in our shared symphony of absurdity, that we find our ['solitary tunes'](https://llego.dev/posts/echoes-solitude-journey-self-discovery/) forming a poignant melody called "Humanity". Perhaps it is not in finding answers, but in the quest itself, that this delicate melody rings true.
+
+**Disclaimer:**
+
+The Python code provided below is a representation created by Mark Anthony Llego for illustrative and educational purposes. It is not intended for production use, and there is no guarantee of its accuracy, functionality, or suitability for any specific purpose. Mark Anthony Llego assumes no responsibility for any consequences or damages that may arise from the use of this code.
+
+**Additional notes:**
+
+- This code is a representation and is not meant for practical application. It is designed to demonstrate concepts and ideas within the context of the accompanying write-up.
+- Any resemblance to real-world code or software is purely coincidental.
+- The code is provided as-is and does not come with any warranties or guarantees of performance or reliability.
+
+**Usage:**
+
+- This code is intended for educational and explanatory purposes only. It can be used as a reference to understand certain programming concepts, but it should not be used in production systems.
+- If you decide to use any part of this code in a real-world project, it is strongly recommended that you review and modify it according to your specific requirements and best practices.
+
+**Questions?**
+
+If you have any questions about the code, please feel free to ask. You can reach me at [markllego@gmail.com](mailto:markllego@gmail.com).

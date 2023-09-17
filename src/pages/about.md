@@ -11,17 +11,18 @@ You've landed in my world, and I am Mark Anthony Llego, standing at the exciting
 
 ## On Professional Front
 
-- Skilled in an array of programming languages, including Python, JavaScript, TypeScript, and HTML5, I've honed the skills to develop smart, data-intensive applications.
-- Utilizing libraries and frameworks like React.js, Redux, Next.js, Node.js, ExpressJS, Django, and Flask, I have the versatility to craft varied web applications, each tailored to its unique requirements.
-- My experience with database management ranges from SQL-based systems, such as SQLite and MySQL, to NoSQL solutions like MongoDB and Firebase, enabling the handling of diverse data structures.
-- I work comfortably with machine learning libraries such as PyTorch and Scikit-Learn, bringing innovative solutions in Machine Learning, Deep Learning, and Natural Language Processing to life.
-- Adept at deploying CSS preprocessors like SASS, and utility-first CSS frameworks like Tailwind CSS, I shape aesthetic and responsive web designs.
-- Applying SEO best practices and speed enhancement techniques, my proficiency with WordPress and hosting services like Google Cloud ensure optimized visibility and user experience.
-- Experienced with Jupyter Notebook and Google Colab, I create and share documents that contain live code, visualizations and narrative text - essential for data cleaning and transformation, numerical simulations, statistical modeling, and machine learning.
+- Proficient in multiple programming languages, including Python, JavaScript, and TypeScript, I've honed my skills to develop smart, data-intensive applications.
+- Fluent in markup language HTML5, I create structurally sound and engaging websites.
+- Adept in libraries and frameworks such as React.js, Redux, Next.js, Node.js, ExpressJS, Django, and Flask, I excel at crafting a diverse array of web applications tailored to unique requirements.
+- Experienced with database management systems like SQLite, MySQL, MongoDB, and Firebase, I maintain optimized data interaction across diverse data structures.
+- Comfortable with machine learning libraries like PyTorch and Scikit-Learn, I bring innovative solutions in Machine Learning, Deep Learning, and Natural Language Processing to life.
+- Leveraging CSS preprocessors and frameworks such as SASS and Tailwind CSS, I design aesthetically pleasing, responsive web designs.
+- Proficient in website optimization using tools such as Google Analytics, Google Search Console, Ahrefs, Semrush, Zaraz, Google Tag Manager, and Screaming Frog, along with SEO best practices, I ensure web platforms deliver optimized visibility and user interaction.
+- Utilizing Jupyter Notebook and Google Colab, I create, share, and collaborate on live-code documents, visualizations, and narrative text, which are critical for tasks such as data cleaning, numeric simulations, d statistical modeling and machine learning.
 - Familiar with Git for version control, I streamline processes and collaborations, maintaining high efficiency in my workflow.
-- Proficient in developing and maintaining APIs, paving the way for seamless integration and communication between different software components.
-- Acquainted with cloud services such as AWS, Google Cloud, and Azure, I manage large datasets, efficiently deploying models in alignment with the rapidly evolving tech sphere.
-- Securing and optimizing performance of websites using Cloudflare, my sites consistently secure high-ranking search results.
+- Proficient in developing and maintaining APIs, I enable seamless integration and communication between disparate software components.
+- Using cloud services such as AWS, Google Cloud, and Azure, I manage large datasets and deploy models efficiently, keeping pace with the rapidly evolving tech sphere.
+- Ensuring data security and website performance optimization with Cloudflare, I contribute to high-ranking search results and improved user experience.
 
 ## A Window To My Mind
 

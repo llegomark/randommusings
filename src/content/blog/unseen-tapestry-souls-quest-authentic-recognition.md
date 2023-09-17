@@ -114,3 +114,23 @@ Every locked gaze feels like a chance for discovery, a possibility. I search for
 But until I find that recognition, until the words, ‘I see you’ are etched in someone's gaze, I will continue painting my emotions on the ['canvas of solitude'](https://llego.dev/posts/echoes-solitude-journey-self-discovery/), carving my dreams on the stones of silence, longing for the day when someone shatters through the soundless echo of my solitary heart – wishing to truly understand, wishing to meet my eyes and see who I am, unmasked and unrestrained.
 
 As 'Iris' echoes in the stillness, I'm left to hope that there's a melody strong enough, a sight clear enough, a love brave enough, to discern the ['true narrative of my life'](https://llego.dev/posts/silent-symphony-alienation-tale-self-acceptance/).
+
+**Disclaimer:**
+
+The Python code provided below is intended for educational and illustrative purposes only. It is a representation in this write-up and should not be used in production environments without appropriate modifications and testing. The author, Mark Anthony Llego, assumes no responsibility for any consequences or damages resulting from the use or misuse of this code. Use it at your own discretion and risk.
+
+**Additional notes:**
+
+This code utilizes various libraries and models for natural language processing and machine learning. Users should ensure they have the necessary dependencies installed and understand the code's functionality before executing it. Additionally, any data used with this code should comply with relevant privacy and ethical considerations.
+
+**Usage:**
+
+To use this code, follow these steps:
+
+1. Ensure you have the required libraries and dependencies installed, as specified in the code.
+2. Provide a CSV file with the required data or modify the code to suit your dataset.
+3. Execute the code with caution, making sure to review and adapt it for your specific use case.
+
+**Questions?**
+
+If you have any questions about the code, please feel free to ask. You can reach me at [markllego@gmail.com](mailto:markllego@gmail.com).

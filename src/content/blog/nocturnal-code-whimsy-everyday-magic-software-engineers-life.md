@@ -68,3 +68,19 @@ Each night unfurls stories more fascinating than fiction, greenhouses connection
 These seemingly ordinary exchanges, woven together with laughter, wit, and shared empathy, reveal an undeniable aura of magic. They spark electric jolts of life into my work, imbuing a sense of purpose beyond the screen. It's within these tiny worlds of humor, joy, and camaraderie where I uncover treasures without measure, gently shining amidst the sprawling grid of cyberspace, their songs of everyday magic resonate with each keystroke.
 
 And so, as the night grows older and my codes sculpt digital terrains, my narrative quietly unfolds. Among the twinkling constellations of family warmth and the abstract harmonies of late-night work, Antipolo city stands vigil. This nocturnal creature, drawing energy from the stars and the enigma of the nightfall, scripts stories in lines of code, discovering laughter, joy, and wonder in the ordinary, unveiling the whimsy of everyday magic.
+
+**Disclaimer:**
+
+The following Python code is serves as an illustrative example and may not be suitable for direct execution in a production environment. The code and its functionalities are for demonstrative purposes only and should be adapted and thoroughly reviewed before use in any real-world application. Mark Anthony Llego assumes no responsibility for any consequences resulting from the use of this code. Use it at your own discretion and risk.
+
+**Additional notes:**
+
+Please ensure that you review, test, and adapt this code to meet your specific requirements and security considerations before deploying it in any production or critical environment. The code may require modifications and enhancements to meet your unique needs.
+
+**Usage:**
+
+This Python code demonstrates the functionality of a Nocturnal Engineer as described in the accompanying write-up. It includes methods for introduction, work, and sleep routines. You can use it as a starting point to explore the concept of a nocturnal software engineer's life and adapt it for your own educational or experimental purposes.
+
+**Questions?**
+
+If you have any questions about the code, please feel free to ask. You can reach me at [markllego@gmail.com](mailto:markllego@gmail.com).

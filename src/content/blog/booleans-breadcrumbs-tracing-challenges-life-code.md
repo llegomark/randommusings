@@ -92,3 +92,19 @@ Some days, in the midst of ['solving complex coding problems'](https://llego.dev
 Life throws cannonballs and I catch them, hoping to stagger and recollect, hoping to ease my burdens on the inside ride down the road. Yet, to let go of even one, feels like failing Arlene, Argi Denise, and Desmond. Sinking low, knowing Arlene awaits, I strive to carry them, for Arlene sent me into this day with the soft regards of her kiss, her confiding whispers, her unwavering support, her reminder of my strength.
 
 Carrying burdens is a paradoxical element of human life, where the weight makes you stagger yet makes you human. It's a constant act of balancing the weights down the line of existence, bound to the mundanity of the everyday. You help and you get helped. You support and you get supported. Perhaps, carrying that weight is what life is about. Perhaps that's how we learn. Perhaps that's how we grow. So, if you knock on my door, don't worry, there's space on this back of mine, space for your burdens, space for you, for me, and for all who journey alongside us.
+
+**Disclaimer:**
+
+The Python code provided here is for illustrative purposes only and is intended as a representation within the context of the accompanying write-up. The code may not be suitable for production use and is not guaranteed to be error-free or optimized for performance. The author, Mark Anthony Llego, provides this code solely for educational and narrative purposes and disclaims any liability for its use in any other context.
+
+**Additional notes:**
+
+The code demonstrates a conceptual analogy between software engineering challenges and real-life burdens. It uses Python and the NetworkX library to create a simplified representation of task dependencies within burdens. However, it is essential to remember that the code's primary purpose is to support the narrative in the write-up and does not constitute a functional software application.
+
+**Usage:**
+
+If you intend to use any part of this code for educational or reference purposes, please ensure that you understand its limitations and adapt it to your specific needs accordingly. Do not use this code in a production environment without thorough testing, optimization, and appropriate error handling.
+
+**Questions?**
+
+If you have any questions about the code, please feel free to ask. You can reach me at [markllego@gmail.com](mailto:markllego@gmail.com).
