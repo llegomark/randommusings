@@ -56,22 +56,24 @@ class Individual:
             print("Final Identity revealed: ", self.identity)
 
 class Activity:
-    def __init__(self, name, start_time, end_time):
+    def __init__(self, name, start_time, end_time, feeling_effect=None):
         self.name = name
         self.start_time = start_time
         self.end_time = end_time
+        self.feeling_effect = feeling_effect
 
     def duration(self):
         return self.end_time - self.start_time
 
 class DayInLife:
-    def __init__(self, name, available_hours=24):
+    def __init__(self, name, available_hours=24, weather=None):
         self.name = name
         self.activities = []
         self.available_hours = available_hours
         self.self = Self()
         self.society = Society()
         self.individual = Individual(['faithful son', 'devoted partner', 'father of two'], ConformingBehavior())
+        self.weather = weather
 
     def add_activity(self, activity):
         if self.available_hours - activity.duration() < 0:
@@ -96,9 +98,14 @@ class DayInLife:
         for i in range(24):  # Simulating day as 24 hours
             self.individual.act(self.society)
             if i % 4 == 0:
-                self.self.emotion_model.major_event()  # Trigger a major event every 4 hours
+                self.self.emotion_model.major_event()
             else:
-                self.self.emotion_model.feel()  # Adding feelings change during resistance
+                self.self.emotion_model.feel(i)
+            if self.weather:
+                self.self.emotion_model.apply_feeling_effect(self.weather.get_weather_effect())
+            for activity in self.activities:
+                if activity.start_time <= i < activity.end_time and activity.feeling_effect:
+                    self.self.emotion_model.apply_feeling_effect(activity.feeling_effect)
 
     def summary(self):
         feelings_summary = ", ".join(f"{feeling}: {round(level[-1], 1)}" for feeling, level in self.self.emotion_model.feelings_over_time.items())
@@ -112,40 +119,62 @@ class EmotionModel:
         self.desires_over_time = self.init_over_time(self.desires)
 
     def init_feelings_and_desires(self):
-        feelings_keys = ["doubt", "fear", "rejection", "joy", "excitement", "sadness", "anger"]
+        feelings_keys = ["doubt", "fear", "rejection", "joy", "excitement", "sadness", "anger", "irritation", "stress", "calm"]
         desires_keys = ["acceptance", "belonging", "recognition", "achievement"]
-        self.feelings = {key: random.uniform(5, 15) for key in feelings_keys}  # Initial values between 5 and 15 to add variability
+        self.feelings = {key: random.uniform(5, 15) for key in feelings_keys}
         self.desires = {key: random.uniform(5, 15) for key in desires_keys}
 
     def init_over_time(self, indicator: dict):
         return {key: [value] for key, value in indicator.items()}
 
     def calc_delta_and_update(self, indicators: dict, attr_mod: int, over_time: dict):
-        delta = random.gauss(0, attr_mod)  # Change uniform distribution to gaussian
-        noise = random.uniform(-1, 1)  # Change to uniform distribution
+        delta = random.gauss(0, attr_mod)
+        noise = random.uniform(-1, 1)
         for key, intensity in indicators.items():
             indicators[key] = max(0, min(10, intensity + delta + noise))
             over_time[key].append(indicators[key])
 
-    def feel(self):
+    def feel(self, time):
         attr_mod = self.attributes["resilience"] if self.feelings["fear"] < 5 else self.attributes["sensitivity"]
         self.calc_delta_and_update(self.feelings, attr_mod, self.feelings_over_time)
+
+        if 6 <= time < 18:  # Daytime adjustment
+            self.feelings["excitement"] += 0.1
+            self.feelings["sadness"] -= 0.1
+        else:  # Nighttime adjustment
+            self.feelings["excitement"] -= 0.1
+            self.feelings["sadness"] += 0.1
+
+    def apply_feeling_effect(self, feeling_effect):
+        for feeling, effect in feeling_effect.items():
+            self.feelings[feeling] = max(0, min(10, self.feelings[feeling] + effect))
 
     def desire(self):
         attr_mod = self.attributes["optimism"] if self.desires["acceptance"] < 5 else -self.attributes["resilience"]
         self.calc_delta_and_update(self.desires, attr_mod, self.desires_over_time)
 
     def major_event(self):
-        # Major events cause a large increase in one random negative feeling and decrease in one random positive feeling
         negative_feelings = ["doubt", "fear", "rejection", "sadness", "anger"]
         positive_feelings = ["joy", "excitement"]
         negative_feeling = random.choice(negative_feelings)
         positive_feeling = random.choice(positive_feelings)
-        self.feelings[negative_feeling] = min(10, self.feelings[negative_feeling] + random.uniform(0, 2))  # Increase the negative feeling
-        self.feelings[positive_feeling] = max(0, self.feelings[positive_feeling] - random.uniform(0, 2))  # Decrease the positive feeling
-        # Record these changes
+        self.feelings[negative_feeling] = min(10, self.feelings[negative_feeling] + random.uniform(0, 2))
+        self.feelings[positive_feeling] = max(0, self.feelings[positive_feeling] - random.uniform(0, 2))
         self.feelings_over_time[negative_feeling].append(self.feelings[negative_feeling])
         self.feelings_over_time[positive_feeling].append(self.feelings[positive_feeling])
+
+class Weather:
+    def __init__(self, weather_type):
+        self.weather_type = weather_type
+
+    def get_weather_effect(self):
+        weather_effects = {
+            'sunny': {'joy': 0.2, 'sadness': -0.2},
+            'rainy': {'joy': -0.2, 'sadness': 0.2},
+            'hot': {'irritation': 0.3, 'joy': -0.1},
+            'cloudy': {'joy': -0.1, 'sadness': 0.1},
+        }
+        return weather_effects.get(self.weather_type, {})
 
 class Self:
     def __init__(self):
@@ -153,27 +182,25 @@ class Self:
 
 if __name__ == "__main__":
 
-    # Instantiate and schedule the activities
-    family_time = Activity('Family Time', 0, 6)
-    work_time = Activity('Work Time', 6, 14)
-    reflection_time = Activity('Self-Reflection Time', 14, 20)
-    resist_conformity = Activity('Resistance Against Societal Norms', 20, 24)
+    family_time = Activity('Family Time', 0, 6, {'joy': 0.1, 'sadness': -0.1})
+    work_time = Activity('Work Time', 6, 14, {'stress': 0.3})
+    reflection_time = Activity('Self-Reflection Time', 14, 20, {'calm': 0.2, 'anger': -0.2})
+    resist_conformity = Activity('Resistance Against Societal Norms', 20, 24, {'excitement': 0.2})
 
-    mark_day = DayInLife('Mark')
+    weather = Weather('hot')
+
+    mark_day = DayInLife('Mark', weather=weather)
     mark_day.add_activity(family_time)
     mark_day.add_activity(work_time)
     mark_day.add_activity(reflection_time)
     mark_day.add_activity(resist_conformity)
 
-    # Brief the day and start resistance
     print(mark_day.brief_day())
     mark_day.resist_conformity()
 
-    # Save the object in a file using pickle
     with open('day_in_life.pkl', 'wb') as file:
         pickle.dump(mark_day, file)
 
-    # Plot feelings over time using matplotlib
     keys = list(mark_day.self.emotion_model.feelings_over_time.keys())
     values = list(mark_day.self.emotion_model.feelings_over_time.values())
     for i in range(len(keys)):
@@ -181,11 +208,9 @@ if __name__ == "__main__":
     plt.legend()
     plt.show()
 
-    # Load the object back from the file
     with open('day_in_life.pkl', 'rb') as file:
         day_in_life = pickle.load(file)
 
-    # Print a summary of the deserialized day_in_life
     print(day_in_life.summary())
 ```
 
