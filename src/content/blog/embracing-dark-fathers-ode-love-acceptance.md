@@ -115,19 +115,3 @@ I am not a man swayed to religion, fashioned by the rigid norms of a Catholic sc
 Armed with this revelation, there's a tranquillity that settles over me. A tranquillity born from the knowledge that in love, we endure. From life to death, we endure. In their hearts, I will endure. Yes, the darkness will come one random eve, a climax to my temporal existence. But in this melody, my love and desire for them will ignite a spark, illuminating those rugged paths, casting metaphysical silhouettes of our togetherness in the deceptively desolate dark.
 
 Death, you're not a phantom to fear, but a dark door to an unseen continuum. And when the day arrives, with this melody as the last strains of my song, embracing love and acceptance, I'll follow you into the dark.
-
-**Disclaimer:**
-
-The following Python code and accompanying write-up have been created for illustrative and educational purposes only. The author, Mark Anthony Llego, provides this code as a representation and does not make any claims regarding its suitability for any specific purpose or its accuracy. Any use of this code in a real-world application should be undertaken with caution and thorough testing. The author assumes no responsibility for any consequences or issues that may arise from the use of this code.
-
-**Additional notes:**
-
-This code is a fictional representation and does not constitute a complete or functional software application. It is intended solely for storytelling and educational purposes.
-
-**Usage:**
-
-This code is not intended for practical use and is provided solely for reading and understanding. It does not perform any real-life functions or operations.
-
-**Questions?**
-
-If you have any questions about the code, please feel free to ask. You can reach me at [markllego@gmail.com](mailto:markllego@gmail.com).

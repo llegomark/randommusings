@@ -84,19 +84,3 @@ Perhaps the wall is a canvas — a testament to our personal narrative and indiv
 Brick by brick, I've built a barrier for myself—a fortress against the inquisitive eyes of society. As I stand tall within these self-tailored walls, I sense a stirring rebellion. Can I dismantle these walls brick by brick, embracing authenticity and individuality to rewrite this narrative?
 
 I am not just another brick succumbing to the shadows of societal norms. I am an individual vibrant with colorful strokes, daring to resist the monochrome tones of conformity. We aren't mere bricks lined in life's oppressive wall. We are vibrant, audacious hues, staining societal grey with our rebellion. Hence, brick by brick, we dismantle imposed walls of conformity, revealing the brilliant aurora of individuality against the monochrome sky of societal norms.
-
-**Disclaimer:**
-
-The Python code provided in this write-up is intended for educational and illustrative purposes only. It is not meant for any specific real-world application or production use. The code and concepts presented are the work of the author, Mark Anthony Llego, and may not adhere to best practices or security standards. Any use of this code in a production environment or any reliance on it for critical tasks is at the user's own risk.
-
-**Additional Notes:**
-
-This code is a conceptual representation of the author's exploration of societal norms and the resistance against conformity. It uses abstract Python classes and methods to symbolize the idea of breaking free from conformity and embracing individuality. It should be viewed as a creative and metaphorical representation rather than a practical software solution.
-
-**Usage:**
-
-This Python code is not intended for direct usage in practical programming projects. It serves as a metaphorical narrative to convey the author's message about resisting societal norms and celebrating individuality. If you intend to use Python for actual software development, please refer to industry-standard coding practices and libraries.
-
-**Questions?**
-
-If you have any questions about the code, please feel free to ask. You can reach me at [markllego@gmail.com](mailto:markllego@gmail.com).

@@ -89,19 +89,3 @@ Amidst a world of fleeting moments, I yearned for authenticity, a crave for ${lo
 The world didn’t comprehend our intricate dance of shared emotions, yet it didn't matter to us. Our story thrived in our vulnerability—a testament to an everlasting, love that reverberated through the chords of ['"Iris"'](https://youtu.be/NdYWuo9OFAw) by the Goo Goo Dolls, our love’s fitting testament.
 
 And so, in the intricate web of code, a heart dreamt, yearned, and loved. A timeless love unfolded, painting words onto the console log, forever etching the tale of ${protagonistName} and ${loveInterestName} in the annals of this beloved codebase.
-
-**Disclaimer:**
-
-The following JavaScript code is a fictional representation created by Mark Anthony Llego for the purpose of storytelling and does not have any functional application. Any resemblance to real individuals, emotions, or settings is purely coincidental. Mark Anthony Llego does not endorse or recommend the use of this code for any practical or programming purposes. This code is meant solely for entertainment and narrative purposes.
-
-**Additional notes:**
-
-This JavaScript code is part of a creative narrative and should not be used as a reference or example for actual programming. It is important to remember that the emotions, characters, and settings described in the narrative are purely fictional.
-
-**Usage:**
-
-This code is not intended for practical use and should only be used for storytelling or illustrative purposes.
-
-**Questions?**
-
-If you have any questions about the code, please feel free to ask. You can reach me at [markllego@gmail.com](mailto:markllego@gmail.com).

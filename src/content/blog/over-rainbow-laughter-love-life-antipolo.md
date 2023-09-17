@@ -69,7 +69,7 @@ class DayInLife:
         self.name = name
         self.activities = []
         self.available_hours = available_hours
-        self.self = Self(resilience=2, sensitivity=1, optimism=3)
+        self.self = Self()
         self.society = Society()
         self.individual = Individual(['faithful son', 'devoted partner', 'father of two'], ConformingBehavior())
 
@@ -90,51 +90,40 @@ class DayInLife:
                 return f"The schedule for {self.name}'s day was updated."
 
     def brief_day(self):
-        day_parts = {activity.name: activity.duration() for activity in self.activities}
-        total_hours = sum(day_parts.values())
-        if total_hours != 24:
-            return "Oops! The total hours do not add up to a full day (24 hours)."
-        else:
-            return f"In a typical day, {self.name} spends {day_parts['Family Time']} hours with his family, " \
-                   f"{day_parts['Work Time']} hours working, " \
-                   f"{day_parts['Self-Reflection Time']} hours reflecting on life, and " \
-                   f"{day_parts['Resistance Against Societal Norms']} hours dreaming about the future."
+        return f"In a typical day, {self.name} spends {self.activities[0].duration()} hours with family, {self.activities[1].duration()} hours working, {self.activities[2].duration()} hours reflecting, and {self.activities[3].duration()} hours dreaming."
 
     def resist_conformity(self):
         for i in range(24):  # Simulating day as 24 hours
             self.individual.act(self.society)
-            self.self.feel()  # Adding feelings change during resistance
+            if i % 4 == 0:
+                self.self.emotion_model.major_event()  # Trigger a major event every 4 hours
+            else:
+                self.self.emotion_model.feel()  # Adding feelings change during resistance
 
     def summary(self):
-        feelings_summary = ", ".join(f"{feeling}: {level[-1]}" for feeling, level in self.self.feelings_over_time.items())
+        feelings_summary = ", ".join(f"{feeling}: {round(level[-1], 1)}" for feeling, level in self.self.emotion_model.feelings_over_time.items())
         return f"Summary of {self.name}'s day:\nAvailable Hours: {self.available_hours}\nFinal Feelings: {feelings_summary}"
 
-class Self:
-    def __init__(self, resilience: int, sensitivity: int, optimism: int):
+class EmotionModel:
+    def __init__(self, resilience: int =2, sensitivity: int =1, optimism: int =3):
         self.attributes = {"resilience": resilience, "sensitivity": sensitivity, "optimism": optimism}
         self.init_feelings_and_desires()
-        self.experiences = []
-        self.relationships = {}
         self.feelings_over_time = self.init_over_time(self.feelings)
         self.desires_over_time = self.init_over_time(self.desires)
 
     def init_feelings_and_desires(self):
-        init_value = 10
         feelings_keys = ["doubt", "fear", "rejection", "joy", "excitement", "sadness", "anger"]
         desires_keys = ["acceptance", "belonging", "recognition", "achievement"]
-        self.feelings = {key: init_value for key in feelings_keys}
-        self.desires = {key: init_value for key in desires_keys}
+        self.feelings = {key: random.uniform(5, 15) for key in feelings_keys}  # Initial values between 5 and 15 to add variability
+        self.desires = {key: random.uniform(5, 15) for key in desires_keys}
 
     def init_over_time(self, indicator: dict):
         return {key: [value] for key, value in indicator.items()}
 
     def calc_delta_and_update(self, indicators: dict, attr_mod: int, over_time: dict):
-        attr_mod = abs(attr_mod)
-        delta = 0
-        while delta == 0:
-            delta = random.randint(-attr_mod, attr_mod+1)
+        delta = random.gauss(0, attr_mod)  # Change uniform distribution to gaussian
+        noise = random.uniform(-1, 1)  # Change to uniform distribution
         for key, intensity in indicators.items():
-            noise = random.gauss(0, 1)  # Add a random noise factor
             indicators[key] = max(0, min(10, intensity + delta + noise))
             over_time[key].append(indicators[key])
 
@@ -146,7 +135,24 @@ class Self:
         attr_mod = self.attributes["optimism"] if self.desires["acceptance"] < 5 else -self.attributes["resilience"]
         self.calc_delta_and_update(self.desires, attr_mod, self.desires_over_time)
 
+    def major_event(self):
+        # Major events cause a large increase in one random negative feeling and decrease in one random positive feeling
+        negative_feelings = ["doubt", "fear", "rejection", "sadness", "anger"]
+        positive_feelings = ["joy", "excitement"]
+        negative_feeling = random.choice(negative_feelings)
+        positive_feeling = random.choice(positive_feelings)
+        self.feelings[negative_feeling] = min(10, self.feelings[negative_feeling] + random.uniform(0, 2))  # Increase the negative feeling
+        self.feelings[positive_feeling] = max(0, self.feelings[positive_feeling] - random.uniform(0, 2))  # Decrease the positive feeling
+        # Record these changes
+        self.feelings_over_time[negative_feeling].append(self.feelings[negative_feeling])
+        self.feelings_over_time[positive_feeling].append(self.feelings[positive_feeling])
+
+class Self:
+    def __init__(self):
+        self.emotion_model = EmotionModel()
+
 if __name__ == "__main__":
+
     # Instantiate and schedule the activities
     family_time = Activity('Family Time', 0, 6)
     work_time = Activity('Work Time', 6, 14)
@@ -168,8 +174,8 @@ if __name__ == "__main__":
         pickle.dump(mark_day, file)
 
     # Plot feelings over time using matplotlib
-    keys = list(mark_day.self.feelings_over_time.keys())
-    values = list(mark_day.self.feelings_over_time.values())
+    keys = list(mark_day.self.emotion_model.feelings_over_time.keys())
+    values = list(mark_day.self.emotion_model.feelings_over_time.values())
     for i in range(len(keys)):
         plt.plot(values[i], label=keys[i])
     plt.legend()
@@ -200,22 +206,3 @@ Antipolo – with its pulsating heart, warmed by the tropical sun, teeming with 
 Joy, hope, dreams adorn the landscape, but so do struggles, fears, and unfulfilled yearnings. As I look at the starlit sky over Antipolo, Desmond's laughter syncopating with Argi's poetic musing, the narrative of Kamakawiwo'ole’s song echoes through my heart. It’s a tuneful recognition of life's dazzling moments interwoven with its somber shades of grey – much like the city enveloping us, much like life itself, each poignant note reverberating, whispering our collective affirmation, "Yes. What a wonderful world it is."
 
 In the end, it's the symphony of laughter and tears, triumphs and tribulations, dreams realized and unfulfilled that tell our story. And through the chapters, across the verses, the city of Antipolo remains our silent companion, reflecting the universal harmonies of life's ever-changing song.
-
-**Disclaimer:**
-
-The Python code provided is for educational purposes only and should not be used for any commercial or production purposes. The author of the code does not make any warranties, express or implied, regarding the accuracy, completeness, or usefulness of the code or the results of its use. The author is not liable for any damages or losses resulting from the use of the code.
-
-**Additional notes:**
-
-- The code is just a representation on the write-up and may not be an accurate or complete reflection of reality.
-- The code is not thoroughly tested and may contain bugs.
-- The code is not optimized for performance or scalability.
-- The code should be used with caution and should be carefully reviewed before use.
-
-**Usage:**
-
-To use the code, simply run it in a Python interpreter. The code will simulate a day in the life of Mark, a 32-year-old freelance software engineer, father, partner, and dreamer, living in Antipolo, Philippines. The code will print a summary of Mark's day, including the activities he did and how he felt throughout the day.
-
-**Questions?**
-
-If you have any questions about the code, please feel free to ask. You can reach me at [markllego@gmail.com](mailto:markllego@gmail.com).

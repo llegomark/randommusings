@@ -112,19 +112,3 @@ It was the curiosity for existential reckoning echoing through Cohen's 'Halleluj
 Embarking on this new path required accepting the inevitable storms that would challenge my resolve. But while the wind might tear at my sails, I knew I possessed an anchor moulded from newfound conviction. My faith was no longer a fixed star in the distant heavens; it became a constellation of ever-evolving truths formed by my ceaselessly pondering heart. My faith, though battered by life's tempests, was more vibrant, more alive, its heartbeat in sync with my own.
 
 Echoes of 'Hallelujah' imprinted on my mind, I embraced the liberation that came with this acceptance, a newfound peace. My faith, once teetering on the frail axis of blind acceptance, had transformed. It now dared to thrive amidst philosophical questioning, thriving amidst the chaos of life's relentless trials. The once imposing silhouette of existential crisis had been recast from villainous shadow into a challenging, yet trusted companion. Night had given way to dawn, and with it sprang forth the raw beauty of authentic faith, bitterly human, profoundly divine.
-
-**Disclaimer:**
-
-The following Python code provided in this document is for demonstration and educational purposes only. It is authored by Mark Anthony Llego and is not intended for production use. The code may contain potential errors, limitations, or security vulnerabilities. Use it at your own discretion and risk. The author, Mark Anthony Llego, shall not be held liable for any consequences or damages arising from the use of this code.
-
-**Additional notes:**
-
-This code is designed as a representation for the accompanying write-up and may not cover all possible scenarios or best practices for real-world applications. It serves as an illustrative example to showcase certain concepts related to sentiment analysis and code structure.
-
-**Usage:**
-
-You are encouraged to review and modify the code to suit your specific needs or to integrate it into your projects. Ensure that you thoroughly test and validate any code modifications before deploying them in a production environment.
-
-**Questions?**
-
-If you have any questions about the code, please feel free to ask. You can reach me at [markllego@gmail.com](mailto:markllego@gmail.com).

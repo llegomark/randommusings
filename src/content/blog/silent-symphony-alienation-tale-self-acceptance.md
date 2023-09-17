@@ -172,20 +172,3 @@ In this orbit, the echo "I don't belong here" gradually transformed into a query
 > You should always be yourself. Unless you can be Batman. Then always be Batman.
 >
 > \- Unknown
-
-**Disclaimer:**
-
-The Python code and accompanying narrative provided here are for educational and illustrative purposes only. The code represents a fictional and simplified scenario of a person's emotional experiences and interactions. It does not provide professional or psychological advice, and its accuracy in modeling human emotions is limited. This code should not be used as a basis for making real-life decisions or assessments of mental health.
-
-**Additional notes:**
-
-- The code includes random events, interactions, and emotional changes that are fictional and simplified for demonstration purposes.
-- The narrative contains personal reflections and emotions, which are fictional and created for the storytelling aspect of the code.
-
-**Usage:**
-
-You are encouraged to explore and modify the code for learning and experimentation. However, please remember that it is not suitable for making real-life assessments of emotions, mental health, or relationships.
-
-**Questions?**
-
-If you have any questions about the code, please feel free to ask. You can reach me at [markllego@gmail.com](mailto:markllego@gmail.com).

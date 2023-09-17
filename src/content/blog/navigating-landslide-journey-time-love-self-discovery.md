@@ -118,19 +118,3 @@ Despite the fear, the uncharted terrains of time bring a newfound strength. The 
 Years pass, and with them does my interpretation of 'Landslide.' Now, its melancholic chords echo with the acceptance of life's changes, its cyclical nature. The landslide of my fears melting into the soothing rhythm of existence. "I'm getting older too," I sing along, a smile shapes my features. The lines on my face define not just age but experiences, love, and the serenity of acceptance.
 
 Looking at our reflection in the snow-covered hills of time, I realize we all have battled our landslides. Now we stand, resilient, bathed in the quietude of acceptance, ready for the next melody life decides to play. Life, much like the song, remains a ['poignant cycle of love'](https://llego.dev/posts/journey-love-through-code-decrypting-emotions-javascript/), growth, and unwavering change. And at every turn, we find the strength to brave the landslides ahead.
-
-**Disclaimer:**
-
-The Python code provided below is for illustrative purposes only and serves as a representation within the context of the write-up authored by Mark Anthony Llego. The code is not intended for production use, and any attempt to use it in a real-world application should be approached with caution and thorough testing. The author, Mark Anthony Llego, shall not be held responsible for any consequences or issues arising from the use of this code.
-
-**Additional notes:**
-
-This Python code is created to enhance the storytelling within the write-up. It showcases a simple Python program that simulates the life events and introspection of a character named Mark. The code is designed to complement the narrative and does not provide full-fledged software functionality.
-
-**Usage:**
-
-This code is primarily intended for educational and illustrative purposes, demonstrating basic Python concepts such as classes, object instantiation, and method usage. If you choose to use or adapt this code, please do so with the understanding that it may require significant modifications to suit practical applications.
-
-**Questions?**
-
-If you have any questions about the code, please feel free to ask. You can reach me at [markllego@gmail.com](mailto:markllego@gmail.com).

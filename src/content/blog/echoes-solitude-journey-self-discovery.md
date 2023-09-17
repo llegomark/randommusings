@@ -65,19 +65,3 @@ My journey of solitude has led to the emergence of intricate philosophies and ev
 This solitary expedition has crafted an introspective alignment between my interactions with the external world and my perception of self. I am, I've realized, not apart from the world, but an integral part of it— a single note in the grand orchestration of existence. The wisdom etched in the silken webs of my solitude now guides my traverse in bustling society, the echo of my whispered self-discoveries offering a compass in interactions with others.
 
 ['As a man of 31'](https://llego.dev/posts/nocturnal-code-whimsy-everyday-magic-software-engineers-life/), every meeting with solitude is a note in the song of my life. My solitude is not flawless, often marred with the small scratches of reality and unforgiving whispers of uncertainty. But, oh, the honesty of those knots! They, too, are part of the experience, the authenticity that carves depth into my journey.
-
-**Disclaimer:**
-
-The Python code provided below is a representation for illustrative purposes only. It may not be optimized for production use and may lack error handling and other features necessary for robust software. The code is authored by Mark Anthony Llego, and any use or adaptation of this code should be done with caution and may require additional testing and modifications to meet specific requirements. The code is not guaranteed to be free from bugs or errors, and the author disclaims any liability for any consequences resulting from its use.
-
-**Additional notes:**
-
-This code is intended to demonstrate the concept of introspection and self-discovery through a simple Python class. It is not intended for real-world applications without further refinement and testing.
-
-**Usage:**
-
-This code can be used as a starting point for understanding how introspection and self-discovery can be implemented in Python. It provides a basic structure for tracking thoughts and emotions over time, but it should be extended and adapted to meet the needs of any specific project.
-
-**Questions?**
-
-If you have any questions about the code, please feel free to ask. You can reach me at [markllego@gmail.com](mailto:markllego@gmail.com).
