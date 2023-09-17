@@ -17,6 +17,22 @@ import matplotlib.pyplot as plt
 import pickle
 from abc import ABC, abstractmethod
 
+class Child:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+son = Child("Desmond", 6)
+daughter = Child("Argi", 11)
+
+class Partner:
+    def __init__(self, name):
+        self.name = name
+        self.mood = 'happy' # default mood
+        self.out_of_town = False
+
+arlene = Partner("Arlene")
+
 class Behavior(ABC):
     @abstractmethod
     def act(self, identity, society):
@@ -99,6 +115,8 @@ class DayInLife:
             self.individual.act(self.society)
             if i % 4 == 0:
                 self.self.emotion_model.major_event()
+                self.self.child_event() #events related to children
+                self.self.partner_event() #events related to partner
             else:
                 self.self.emotion_model.feel(i)
             if self.weather:
@@ -119,7 +137,7 @@ class EmotionModel:
         self.desires_over_time = self.init_over_time(self.desires)
 
     def init_feelings_and_desires(self):
-        feelings_keys = ["doubt", "fear", "rejection", "joy", "excitement", "sadness", "anger", "irritation", "stress", "calm"]
+        feelings_keys = ["doubt", "fear", "rejection", "joy", "excitement", "sadness", "anger", "irritation", "stress", "calm", "love", "loneliness", "concern", "pride","disappointment"]
         desires_keys = ["acceptance", "belonging", "recognition", "achievement"]
         self.feelings = {key: random.uniform(5, 15) for key in feelings_keys}
         self.desires = {key: random.uniform(5, 15) for key in desires_keys}
@@ -179,6 +197,31 @@ class Weather:
 class Self:
     def __init__(self):
         self.emotion_model = EmotionModel()
+        self.children = [son, daughter]
+        self.partner = arlene
+
+    def child_event(self):
+        # simple representaion for checking if children does something
+        if bool(random.getrandbits(1)):
+            self.emotion_model.feelings['joy'] += 1
+        if bool(random.getrandbits(1)):
+            self.emotion_model.feelings['pride'] += 2
+        if son.age < 8 and bool(random.getrandbits(1)):
+            self.emotion_model.feelings['anger'] += 1
+        elif bool(random.getrandbits(1)):
+            self.emotion_model.feelings['disappointment'] += 1
+
+    def partner_event(self):
+        if bool(random.getrandbits(1)):
+            self.emotion_model.feelings['love'] += 2
+        if bool(random.getrandbits(1)):
+            self.emotion_model.feelings['concern'] += 1
+        if self.partner.out_of_town and days_apart > 3:
+            self.emotion_model.feelings['loneliness'] += 1
+        if self.partner.mood == 'happy':
+            self.emotion_model.feelings['joy'] += 1
+        elif self.partner.mood == 'sad':
+            self.emotion_model.feelings['sadness'] += 1
 
 if __name__ == "__main__":
 
@@ -187,13 +230,22 @@ if __name__ == "__main__":
     reflection_time = Activity('Self-Reflection Time', 14, 20, {'calm': 0.2, 'anger': -0.2})
     resist_conformity = Activity('Resistance Against Societal Norms', 20, 24, {'excitement': 0.2})
 
+    play_with_son = Activity("Play with Desmond", 10, 12, {'joy': 1})
+    study_with_daughter = Activity("Study with Argi", 16, 18, {'pride': 2})
+
+    dinner_with_partner = Activity("Dinner with Arlene", 18, 20, {'love': 1, 'joy': 1})
+
     weather = Weather('hot')
 
     mark_day = DayInLife('Mark', weather=weather)
+
     mark_day.add_activity(family_time)
     mark_day.add_activity(work_time)
     mark_day.add_activity(reflection_time)
     mark_day.add_activity(resist_conformity)
+    mark_day.add_activity(play_with_son)
+    mark_day.add_activity(study_with_daughter)
+    mark_day.add_activity(dinner_with_partner)
 
     print(mark_day.brief_day())
     mark_day.resist_conformity()
