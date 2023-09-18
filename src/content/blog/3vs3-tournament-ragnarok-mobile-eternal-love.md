@@ -1,7 +1,7 @@
 ---
 author: Mark Anthony Llego
 pubDatetime: 2023-09-18T02:36:13Z
-title: "Unleashing the Epic 3vs3 PVP Simulation for Ragnarok Mobile: Eternal Love - Hellion Guild"
+title: "Enhanced Simulation of Ragnarok Mobile: Eternal Love 3vs3 PVP Tournament"
 postSlug: epic-3vs3-pvp-simulation-ragnarok-mobile-eternal-love-hellion-guild
 featured: false
 draft: false
@@ -66,7 +66,7 @@ class Player:
     Represents a player with their attributes.
     """
 
-    def __init__(self, name: str, job: str, skill: str, equipment: int):
+    def __init__(self, name: str, job: str, skill: int, equipment: int):
         """
         Initialize a Player object.
         :param name: The player's name.
@@ -80,14 +80,27 @@ class Player:
         self.equipment = equipment
         self.average_strength = 0
         self.num_wins = 0
+        self.num_losses = 0
+
+    @classmethod
+    def randomize_skill(cls, job: str) -> int:
+        """
+        Randomizes the skill level based on the job.
+        :param job: The job of the player.
+        :return: The randomized skill level.
+        """
+        base_skill = JOB_RANKINGS[job]
+        randomized_skill = random.randint(int(base_skill * 0.8), int(base_skill * 1.2))
+        return randomized_skill
 
     def base_strength(self) -> float:
         """
         Calculate the base strength of the player based on their attributes.
         :return: The base strength of the player.
         """
-        job_multiplier = JOB_MULTIPLIERS[self.job]
-        base_strength = random.gauss(JOB_RANKINGS[self.job] * job_multiplier * self.equipment, GAUSSIAN_STD)
+        job_multiplier = random.uniform(0.8, 1.2)  # Randomize job multipliers each tournament
+        job_ranking = random.randint(1, 10)  # Randomize job rankings each tournament
+        base_strength = random.gauss(job_ranking * job_multiplier * self.equipment, GAUSSIAN_STD)
         logging.debug(f"Base strength of {self.name}: {base_strength}")
         return base_strength
 
@@ -119,6 +132,19 @@ class Team:
 
         assert len(self.members) == 3, "Team must have exactly three members"
 
+    @classmethod
+    def swap_players(cls, team1: 'Team', team2: 'Team') -> Tuple['Team', 'Team']:
+        """
+        Swaps random players between two teams to mix up team compositions.
+        :param team1: The first team.
+        :param team2: The second team.
+        :return: The two teams with swapped players.
+        """
+        random_indices = random.sample(range(3), k=2)
+        team1.members[random_indices[0]], team2.members[random_indices[1]] = team2.members[random_indices[1]], \
+                                                                               team1.members[random_indices[0]]
+        return team1, team2
+
     def strength(self, interactions: SkillInteractions) -> float:
         total_strength = 0.0  # Initialize as float
         for i in range(len(self.members)):
@@ -145,91 +171,89 @@ def calculate_mvp(player_performance: Dict[str, List[float]]) -> str:
     return mvp
 
 
-def apply_buffs_debuffs(teams: Dict[str, Team]) -> None:
+def analyze_skill_pair_data(skill_pair_performance: Dict[Tuple[str, str], int], tournaments_played: int):
     """
-    Apply random buffs and debuffs to players' skill levels based on their jobs.
-    :param teams: A dictionary of teams.
+    Analyze the skill pair data after each tournament to detect imbalances.
+    Increase/decrease synergy bonuses to buff/nerf overpowered combinations.
     """
-    for team in teams.values():
-        for player in team.members:
-            buff_debuff_multiplier = random.uniform(0.8, 1.2)
-            player.skill *= buff_debuff_multiplier
-            JOB_RANKINGS[player.job] *= buff_debuff_multiplier
+    for skill_pair, occurrences in skill_pair_performance.items():
+        if occurrences > tournaments_played * 0.6:  # Skill pair has occurred in more than 60% of tournaments
+            synergy_bonus = skill_pair_performance[skill_pair] / tournaments_played
+            logging.info(f"Skill pair {skill_pair} is overpowered. Current synergy bonus: {synergy_bonus}")
+            if synergy_bonus > 1.5:  # Adjust synergy bonus based on desired balance
+                logging.info("Nerfing synergy bonus")
+                skill_interaction.synergy_dict[skill_pair] *= 0.8
+            elif synergy_bonus < 0.5:
+                logging.info("Buffing synergy bonus")
+                skill_interaction.synergy_dict[skill_pair] *= 1.2
 
 
-def match(team1: Team, team2: Team, player_performance: Dict[str, List[float]],
-          job_performance: Dict[str, float]) -> Tuple[Team, float]:
+def force_skill_pair_rematches(teams: Dict[str, Team], skill_pair_performance: Dict[Tuple[str, str], int]):
     """
-    Simulate a match between two teams and update player and job performance dictionaries.
-    :param team1: The first team.
-    :param team2: The second team.
-    :param player_performance: A dictionary to store player performance.
-    :param job_performance: A dictionary to store job performance.
-    :return: A tuple of the winning team and the maximum strength among the teams.
+    Occasionally force rematches of skill pairs that haven't been seen often to gather more data.
     """
-    interactions = SkillInteractions()
-    apply_buffs_debuffs({team1.name: team1, team2.name: team2})  # Apply buffs and debuffs
-
-    strength1 = team1.strength(interactions)
-    strength2 = team2.strength(interactions)
-
-    weight1 = random.uniform(0.9, 1.1)
-    weight2 = random.uniform(0.9, 1.1)
-    strength1 *= weight1
-    strength2 *= weight2
-
-    if strength1 > strength2:
-        winning_team = team1
-    else:
-        winning_team = team2
-
-    # Update player and job performance
-    for team in [team1, team2]:
-        for player in team.members:
-            player_strength = player.strength(interactions, opponent=team.members[0])
-            player_performance[player.name].append(player_strength)
-            job_performance[player.job] += player_strength
-
-            player.average_strength = (player.average_strength * player.num_wins + player_strength) / (
-                    player.num_wins + 1)
-            player.num_wins += 1
-
-    return winning_team, max(strength1, strength2)
+    rematch_threshold = 3  # Number of occurrences below which a rematch is forced
+    for skill_pair, occurrences in skill_pair_performance.items():
+        if occurrences < rematch_threshold:
+            logging.info(f"Forcing rematch of skill pair {skill_pair}")
+            for team in teams.values():
+                for player in team.members:
+                    if player.skill == skill_pair[0]:
+                        player.skill = Player.randomize_skill(player.job)
+                        logging.info(f"Player {player.name} has new skill level: {player.skill}")
 
 
-def tournament(teams: Dict[str, Team]) -> Tuple[Team, List[float], Dict[str, List[float]], Dict[str, float]]:
+def analyze_job_performance(job_performance: Dict[str, float], tournaments_played: int):
     """
-    Simulate a round-robin style tournament between teams and calculate the winner and performance metrics.
-    :param teams: A dictionary of teams.
-    :return: A tuple of the winning team, winning strengths, player performance, and job performance.
+    Analyze job performance over time to detect jobs that need buffs/nerfs.
+    Adjust job multipliers and rankings accordingly.
     """
-    player_performance = {player.name: [] for team in teams.values() for player in team.members}
-    job_performance = collections.defaultdict(float)
+    for job, total_strength in job_performance.items():
+        average_strength = total_strength / tournaments_played
+        logging.info(f"Job {job} average strength: {average_strength}")
+        if average_strength > 10000:  # Placeholder threshold for imbalance detection
+            logging.info(f"Job {job} is overpowered. Current multiplier: {JOB_MULTIPLIERS[job]}")
+            JOB_MULTIPLIERS[job] *= 0.9  # Nerf job multiplier by 10%
 
-    teams_list = list(teams.values())
-    num_teams = len(teams_list)
-    matches_per_round = (num_teams - 1)
-    total_rounds = num_teams - 1
 
-    for current_round in range(total_rounds):
-        round_results = []
+def simulate_tournaments_in_advance(teams: Dict[str, Team], num_simulations: int):
+    """
+    Simulate multiple tournaments in advance to forecast expected win rates for players/jobs/skill pairs
+    before using for actual tournaments.
+    """
+    player_win_rates = {player.name: 0 for team in teams.values() for player in team.members}
+    job_win_rates = {job: 0 for job in JOB_RANKINGS.keys()}
+    skill_pair_win_rates = {(skill1, skill2): 0 for skill1 in JOB_RANKINGS.keys() for skill2 in JOB_RANKINGS.keys()}
 
-        for match_number in range(matches_per_round):
-            team1_index = (current_round + match_number) % (num_teams - 1)
-            team2_index = (num_teams - 1 - match_number + current_round) % (num_teams - 1)
-            team1 = teams_list[team1_index]
-            team2 = teams_list[team2_index]
-            winning_team, winning_strength = match(team1, team2, player_performance, job_performance)
-            round_results.append((winning_team, winning_strength))
+    for _ in range(num_simulations):
+        player_performance = {player.name: [] for team in teams.values() for player in team.members}
+        job_performance = collections.defaultdict(float)
+        skill_pair_performance = {}
 
-        round_results.sort(key=lambda x: x[1], reverse=True)
-        winning_team = round_results[0][0]
-        winning_strengths = [strength for _, strength in round_results]
+        tournament_results = tournament(teams, 1)[0]  # Run one tournament
+        winner, _, player_performance, job_performance = tournament_results
 
-        team_rankings = collections.Counter(team for team, _ in round_results)
-        teams_list.sort(key=lambda x: team_rankings[x], reverse=True)
+        for player, strengths in player_performance.items():
+            if len(strengths) > 0:
+                player_win_rates[player] += 1
 
-    return teams_list[0], winning_strengths, player_performance, job_performance
+        for job, total_strength in job_performance.items():
+            average_strength = total_strength / len(player_performance)
+            job_win_rates[job] += average_strength
+
+        for skill_pair, _ in skill_pair_performance.items():
+            skill_pair_win_rates[skill_pair] += 1
+
+    for player in player_win_rates:
+        player_win_rates[player] /= num_simulations
+
+    for job in job_win_rates:
+        job_win_rates[job] /= num_simulations
+
+    for skill_pair in skill_pair_win_rates:
+        skill_pair_win_rates[skill_pair] /= num_simulations
+
+    return player_win_rates, job_win_rates, skill_pair_win_rates
 
 
 class Plotter:
@@ -376,74 +400,187 @@ def main():
                   'Team 7', 'Team 8', 'Team 9', 'Team 10', 'Team 11', 'Team 12']
 
     team_members = [
-        [Player('Jabee', 'Rathgricy', '5', 1), Player('Sprite', 'Phantom Dancer', '7', 1),
-         Player('Sugar', 'Begetter', '8', 1)],
-        [Player('Antheus', 'Luna Danseuse', '9', 1), Player('Drrn', 'Gunslinger', '6', 1),
-         Player('Art', 'Hela', '7', 1)],
-        [Player('Tops', 'Blade Soul', '8', 1), Player('Jashobeam', 'Phantom Dancer', '6', 1),
-         Player('Cai', 'Saint', '5', 1)],
-        [Player('Goku', 'Thanatos', '9', 1), Player('Jpwiz', 'Chronomancer', '7', 1),
-         Player('Badtrip', 'Phantom Dancer', '9', 1)],
-        [Player('Yatoro', 'Hela', '7', 1), Player('Close', 'Saint', '8', 1), Player('Jocel', 'Jormungandr', '6', 1)],
-        [Player('Notting', 'Blade Soul', '6', 1), Player('Black', 'Rathgricy', '7', 1),
-         Player('Bulok', 'Saint', '8', 1)],
-        [Player('Bryn', 'Ronin', '7', 1), Player('Leitsac', 'Begetter', '5', 1),
-         Player('Trixie', 'Nidhogg', '6', 1)],
-        [Player('Gab', 'Arcane Master', '8', 1), Player('Hermit', 'Hela', '6', 1),
-         Player('Found', 'Chronomancer', '5', 1)],
-        [Player('Ryleigh', 'Blade Soul', '6', 1), Player('Athan28', 'Rathgricy', '7', 1),
-         Player('Iyot', 'Phantom Dancer', '8', 1)],
-        [Player('JL', 'Arcane Master', '7', 1), Player('Eren', 'Genos', '5', 1),
-         Player('Greed', 'Rathgricy', '6', 1)],
-        [Player('Suzy', 'Chronomancer', '8', 1), Player('Meputia', 'Rathgricy', '6', 2),
-         Player('Cyrax', 'Thanatos', '7', 1)],
-        [Player('Dillydaly', 'Stellar Hunter', '5', 1), Player('Puch', 'Hela', '7', 1),
-         Player('Kent', 'Begetter', '6', 1)],
+        [Player('Jabee', 'Rathgricy', Player.randomize_skill('Rathgricy'), 1),
+         Player('Sprite', 'Phantom Dancer', Player.randomize_skill('Phantom Dancer'), 1),
+         Player('Sugar', 'Begetter', Player.randomize_skill('Begetter'), 1)],
+        [Player('Antheus', 'Luna Danseuse', Player.randomize_skill('Luna Danseuse'), 1),
+         Player('Drrn', 'Gunslinger', Player.randomize_skill('Gunslinger'), 1),
+         Player('Art', 'Hela', Player.randomize_skill('Hela'), 1)],
+        [Player('Tops', 'Blade Soul', Player.randomize_skill('Blade Soul'), 1),
+         Player('Jashobeam', 'Phantom Dancer', Player.randomize_skill('Phantom Dancer'), 1),
+         Player('Cai', 'Saint', Player.randomize_skill('Saint'), 1)],
+        [Player('Goku', 'Thanatos', Player.randomize_skill('Thanatos'), 1),
+         Player('Jpwiz', 'Chronomancer', Player.randomize_skill('Chronomancer'), 1),
+         Player('Badtrip', 'Phantom Dancer', Player.randomize_skill('Phantom Dancer'), 1)],
+        [Player('Yatoro', 'Hela', Player.randomize_skill('Hela'), 1),
+         Player('Close', 'Saint', Player.randomize_skill('Saint'), 1),
+         Player('Jocel', 'Jormungandr', Player.randomize_skill('Jormungandr'), 1)],
+        [Player('Notting', 'Blade Soul', Player.randomize_skill('Blade Soul'), 1),
+         Player('Black', 'Rathgricy', Player.randomize_skill('Rathgricy'), 1),
+         Player('Bulok', 'Saint', Player.randomize_skill('Saint'), 1)],
+        [Player('Bryn', 'Ronin', Player.randomize_skill('Ronin'), 1),
+         Player('Leitsac', 'Begetter', Player.randomize_skill('Begetter'), 1),
+         Player('Trixie', 'Nidhogg', Player.randomize_skill('Nidhogg'), 1)],
+        [Player('Gab', 'Arcane Master', Player.randomize_skill('Arcane Master'), 1),
+         Player('Hermit', 'Hela', Player.randomize_skill('Hela'), 1),
+         Player('Found', 'Chronomancer', Player.randomize_skill('Chronomancer'), 1)],
+        [Player('Ryleigh', 'Blade Soul', Player.randomize_skill('Blade Soul'), 1),
+         Player('Athan28', 'Rathgricy', Player.randomize_skill('Rathgricy'), 1),
+         Player('Iyot', 'Phantom Dancer', Player.randomize_skill('Phantom Dancer'), 1)],
+        [Player('JL', 'Arcane Master', Player.randomize_skill('Arcane Master'), 1),
+         Player('Eren', 'Genos', Player.randomize_skill('Genos'), 1),
+         Player('Greed', 'Rathgricy', Player.randomize_skill('Rathgricy'), 1)],
+        [Player('Suzy', 'Chronomancer', Player.randomize_skill('Chronomancer'), 1),
+         Player('Meputia', 'Rathgricy', Player.randomize_skill('Rathgricy'), 2),
+         Player('Cyrax', 'Thanatos', Player.randomize_skill('Thanatos'), 1)],
+        [Player('Dillydaly', 'Stellar Hunter', Player.randomize_skill('Stellar Hunter'), 1),
+         Player('Puch', 'Hela', Player.randomize_skill('Hela'), 1),
+         Player('Kent', 'Begetter', Player.randomize_skill('Begetter'), 1)],
     ]
 
     teams = {name: Team(name, members) for name, members in zip(team_names, team_members)}
 
-    winner, winning_strengths, player_performance, job_performance = tournament(teams)
+    num_tournaments = 5  # Number of tournaments to run
 
-    mvp = calculate_mvp(player_performance)
-    logging.info(f"The Most Valuable Player is: {mvp}")
-    logging.info(f"The winning team is: {winner.name}")
+    # Track wins/losses for each skill pair
+    skill_pair_performance = {}
 
+    for tournament_index in range(num_tournaments):
+        player_performance = {player.name: [] for team in teams.values() for player in team.members}
+        job_performance = collections.defaultdict(float)
+
+        # Analyze skill pair data after each tournament
+        analyze_skill_pair_data(skill_pair_performance, tournament_index + 1)
+
+        # Occasionally force rematches of skill pairs that haven't been seen often
+        force_skill_pair_rematches(teams, skill_pair_performance)
+
+        tournament_results = tournament(teams, 1)[0]  # Run one tournament
+        winner, _, player_performance, job_performance = tournament_results
+
+        # Update skill pair performance based on tournament results
+        for team in [team for team in teams.values() if team == winner]:
+            for player in team.members:
+                for opponent in [opponent for opponent in team.members if opponent != player]:
+                    skill_pair = (player.skill, opponent.skill)
+                    if skill_pair in skill_pair_performance:
+                        skill_pair_performance[skill_pair] += 1
+                    else:
+                        skill_pair_performance[skill_pair] = 1
+
+    # Calculate player win rates, job performance, and skill pair win rates
+    player_win_rates, job_win_rates, skill_pair_win_rates = simulate_tournaments_in_advance(teams, num_tournaments)
+
+    # Apply adjustments based on win rates
+    for team in teams.values():
+        for player in team.members:
+            if player.name in player_win_rates:
+                win_rate = player_win_rates[player.name]
+                logging.info(f"Adjusting skill level of player {player.name} based on win rate: {win_rate}")
+                player.skill = adjust_skill_level(player.skill, win_rate)
+
+    for job, win_rate in job_win_rates.items():
+        logging.info(f"Adjusting job multiplier of job {job} based on win rate: {win_rate}")
+        JOB_MULTIPLIERS[job] = adjust_job_multiplier(JOB_MULTIPLIERS[job], win_rate)
+
+    for skill_pair, win_rate in skill_pair_win_rates.items():
+        logging.info(f"Adjusting synergy bonus of skill pair {skill_pair} based on win rate: {win_rate}")
+        adjust_synergy_bonus(skill_pair, win_rate)
+
+    # Run final tournaments with adjusted skill levels, job multipliers, and synergy bonuses
+    tournament_results = tournament(teams, num_tournaments)
+
+    all_mvp = []
+    all_winners = []
     plotter = Plotter()
-    plotter.progression(winning_strengths)
-    plotter.top_players(player_performance)
-    plotter.job_performance(job_performance)
-    plotter.distribution_of_strengths(player_performance)
-    plotter.individual_progression(player_performance)
+
+    for tournament_index, result in enumerate(tournament_results):
+        winner, winning_strengths, player_performance, job_performance = result
+        mvp = calculate_mvp(player_performance)
+        logging.info(f"The Most Valuable Player of Tournament {tournament_index + 1} is: {mvp}")
+        logging.info(f"The winning team of Tournament {tournament_index + 1} is: {winner.name}")
+        all_mvp.append(mvp)
+        all_winners.append(winner.name)
+
+        # Plot tournament results
+        plotter.progression(winning_strengths)
+        plotter.top_players(player_performance)
+        plotter.job_performance(job_performance)
+        plotter.distribution_of_strengths(player_performance)
+        plotter.individual_progression(player_performance)
+
+    logging.info(f"All MVPs: {all_mvp}")
+    logging.info(f"All winners: {all_winners}")
 
 
 if __name__ == '__main__':
     main()
+
 ```
+
+['GitHub'](https://github.com/llegomark/simulation)
 
 ![Ragnarok Mobile: Eternal Love](https://llego.dev/assets/Screenshot_2023.09.14_22.30.19.953.png)
 
-Hey there! I've recently been working on some code for our upcoming Internal 3vs3 PVP in our striking Hellion Guild. I wanted to showcase my Python skills by creating a fun and interactive tournament simulation for Ragnarok Mobile: Eternal Love.
+Greetings! I have been working on a Python code to simulate an upcoming Internal 3vs3 PVP tournament in our striking Hellion Guild. This code showcases my Python skills while providing a fun and interactive tournament simulation for Ragnarok Mobile: Eternal Love.
 
-My code aims to simulate an exciting round-robin style tournament between teams of 3 players each. I added random buffs and debuffs based on the player's job rankings and skill levels to make things interesting. This introduces a level of unpredictability and strategy to the matches. Remember that this simulation does not consider the players' equipment, stats, skills, or other attributes. It is purely a simulation and does not reflect the actual gameplay mechanics of Ragnarok Mobile: Eternal Love.
+The simulation simulates an exciting round-robin style tournament between teams of three players. I have incorporated random buffs and debuffs based on the players' job rankings and skill levels to make things more interesting. This introduces a level of unpredictability and strategy to the matches. However, it's important to note that this simulation does not consider the players' equipment, stats, skills, or other attributes. It is purely a simulation and does not reflect the actual gameplay mechanics of Ragnarok Mobile: Eternal Love.
 
-I created the `Player,` `Team,` and `SkillInteractions` classes in the code to represent individual players, teams, and skill interactions between players. Each player is assigned a name, job, skill, and equipment level. The team's total strength is calculated based on the combined strength of its members.
+## Code Design
 
-I used various calculations and data structures to determine the tournament's winner and performance metrics. The most valuable player (MVP) is calculated based on the average strength of each player throughout the matches.
+To develop this simulation, I have created several classes and functionalities in the Python code:
 
-In the modified version of the code, I added several new features. Firstly, I implemented a class called `SkillInteractions` to handle skill interactions between players. This class defines dictionaries for synergy, counter, status effects, combo breakers, buffs, and debuffs. This class's `apply_skill_interactions` method uses skill interactions to modify the players' strengths.
+### 1. Player, Team, and SkillInteractions Classes
 
-I also added a `Plotter` class to handle plotting functionalities for the tournament results. This class includes methods for plotting the progression of the winning team's score, the top 3 players based on total strength, the performance of jobs in the tournament, the distribution of player strengths, and the individual strength progression of each player.
+I have defined the `Player`, `Team`, and `SkillInteractions` classes to represent individual players, teams, and skill interactions between players.
 
-Furthermore, I modified the `Player` class to include new attributes and methods. Each player now has an `average_strength` attribute to store their average strength throughout the matches and a `num_wins` attribute to keep track of the number of wins during the tournament. The `strength` method in the `Player` class now considers the skill interactions between players to calculate the modified strength of the player.
+The `Player` class represents a player with attributes such as their name, job, skill level, and equipment level. Each player is assigned a random skill level based on their job. The `Player` class also includes methods to calculate the base strength of a player and the modified strength considering skill interactions with their opponents.
 
-The `calculate_mvp` function was modified to accept the new player performance dictionary and calculate the MVP based on the average strength of each player.
+The `Team` class represents a team consisting of three players. It includes a method to calculate the team's total strength based on its members' combined strength.
 
-Lastly, the `apply_buffs_debuffs` function was added to apply random buffs and debuffs to players' skill levels and job rankings based on their jobs.
+The `SkillInteractions` class handles the skill interactions between players. It defines dictionaries for synergy, counter, status effects, combo breakers, buffs, and debuffs. This class's `apply_skill_interactions` method modifies the players' strengths based on the defined skill interactions.
 
-This modified code should provide an enhanced and more comprehensive simulation of the 3vs3 PVP tournament in Ragnarok Mobile: Eternal Love. I'm excited about our upcoming PVP, and I hope this code contributes to the fun and competitive spirit of the event. Let's enjoy the tournament, and may the best team emerge victorious in Ragnarok Mobile: Eternal Love!
+### 2. Additional Features
 
-Feel free to reach out if you have any questions or need further assistance. See you on the battleground!
+In the modified version of the code, I have added some additional features to enhance the simulation:
+
+- **Skill Interactions**: I implemented a class called `SkillInteractions` to handle the skill interactions between players. This class defines dictionaries for various skill interactions such as synergy, counter, status effects, combo breakers, buffs, and debuffs. This class's `apply_skill_interactions` method uses the defined skill interactions to modify the players' strengths.
+
+- **Plotter Class**: I added a `Plotter` class to handle plotting functionalities for the tournament results. This class includes methods for plotting the progression of the winning team's score, the top 3 players based on total strength, the performance of jobs in the tournament, the distribution of player strengths, and the individual strength progression of each player.
+
+### 3. Calculation Functions
+
+I have also included several functions to perform calculations and analysis in the code:
+
+- **calculate_mvp**: This function calculates the Most Valuable Player (MVP) based on the average strength of each player.
+
+- **analyze_skill_pair_data**: This function analyzes the skill pair data after each tournament to detect imbalances. It suggests adjustments to synergy bonuses for overpowered skill combinations.
+
+- **force_skill_pair_rematches**: This function occasionally forces rematches of skill pairs that have yet to be seen often to gather more data.
+
+- **analyze_job_performance**: This function analyzes the performance over time to detect jobs needing buffs or nerfs. It suggests adjustments to job multipliers and rankings accordingly.
+
+- **simulate_tournaments_in_advance**: This function simulates multiple tournaments in advance to forecast expected win rates for players, jobs, and skill pairs. It returns the calculated win rates for further adjustments.
+
+### 4. Constants and Configuration
+
+The code includes certain constants and configuration parameters:
+
+- **JOB_RANKINGS**: A dictionary that defines the base skill level for each job.
+
+- **JOB_MULTIPLIERS**: A dictionary that sets the initial job multipliers for balancing job performance.
+
+- **GAUSSIAN_STD**: The standard deviation used in calculating the base strength of players.
+
+- **NUM_BINS**: The number of bins used in plotting the distribution of player strengths.
+
+## Final Thoughts
+
+With these enhancements, the modified code provides an enhanced and more comprehensive simulation of the 3vs3 PVP tournament in Ragnarok Mobile: Eternal Love. Adding the `SkillInteractions` class and the `Plotter` class increases the flexibility and analytical capabilities of the simulation. Adjusting skill levels, job multipliers, and synergy bonuses based on win rates improves the simulation's balance and fairness.
+
+I hope this updated code contributes to the fun and competitive spirit of the upcoming PVP event. See you on the battleground, and may the best team emerge victorious in Ragnarok Mobile: Eternal Love!
+
+Please feel free to reach out if you have any questions or need further assistance.
 
 ## Example Code Outputs
 
