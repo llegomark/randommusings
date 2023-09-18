@@ -3,7 +3,7 @@ author: Mark Anthony Llego
 pubDatetime: 2023-09-17T14:25:31Z
 title: "Over the Rainbow: Of Laughter, Love, and Life in Antipolo"
 postSlug: over-rainbow-laughter-love-life-antipolo
-featured: true
+featured: false
 draft: false
 tags:
   - personal
@@ -435,18 +435,18 @@ if __name__ == "__main__":
 
 <a href="https://colab.research.google.com/drive/1sDjZZV96ERij97TLh86emmIb_c8ir8r3?usp=sharing" target="_blank">Run the code on Google Colab</a>
 
-As dawn breaks and the first sunrays touch the vibrant cityscape of Antipolo, I, Mark, a 32-year-old freelance software engineer, father, partner, and dreamer, awake to the ballet of life. Some days, life unfolds just as erratically as the tides of traffic along Marcos Highway, but the rhythmic predictability provides comfort, offers a melody to the background score of my life.
+As dawn breaks and the first sunrays touch the vibrant cityscape of Antipolo, I, Mark, a 32-year-old freelance software engineer, father, partner, and dreamer, awake to the ballet of life. Some days, life unfolds just as erratically as the tides of traffic along Marcos Highway. Still, the rhythmic predictability provides comfort and a melody to my life's background score.
 
 My fingers dance across the keyboard, crafting virtual worlds enshrined within lines of intricate code. Yet, the true symphony of my existence resounds through the rooms of our humble abode, orchestrated by the laughter of my children - Argi Denise, a thoughtful, brilliant 11-year-old, and playful Desmond, 6, whose energies transcend the limitations of age.
 
 Engulfed in the laughter-echoed halls, time almost stands still, as if the hovering notes of Kamakawiwoʻole's beautifully stitched medley ['Over the Rainbow/What a Wonderful World'](https://www.youtube.com/watch?v=V1bFr2SWP1I&ab_channel=MountainAppleCompanyInc) were frozen in mid-air.
 
-The complete embodiment of wonder is found not in grandeur, but in the simplest moments – the joyful cacophony of Desmond chasing after Argi in the park, the perpetual dance of shadows and light on the Mango trees surrounding us as the sun takes its nightly bow, and the embrace of Arlene's comforting hand, stirring a sense of rootedness amidst the winds of change. Life here in Antipolo, far from perfection, is a testament to resilience, to the power of dreams, to the romantic dance between struggle and hope painted by Israel's song.
+The complete embodiment of wonder is found not in grandeur but in the simplest moments – the joyful cacophony of Desmond chasing after Argi in the park, the perpetual dance of shadows and light on the Mango trees surrounding us as the sun takes its nightly bow, and the embrace of Arlene's comforting hand, stirring a sense of rootedness amidst the winds of change. Life here in Antipolo, far from perfection, is a testament to resilience, the power of dreams, and the romantic dance between struggle and hope painted by Israel's song.
 
-As volatile and unpredictable as life can be, there is power and beauty in its constancy. The somnolent lull succeeding the lively hunts of the day brings with it a quiet symphony, the unvoiced whispers of the city. I see a silent canvas – painted with dreams of a farther horizon, the longed-for tomorrow. This city, my home, living its own narrative, is a silent actor in the tale of our lives, shaping us with an indelible mark each day.
+As volatile and unpredictable as life can be, there is power and beauty in its constancy. The somnolent lull succeeding the lively hunts of the day brings a quiet symphony, the unvoiced whispers of the city. I see a silent canvas – painted with dreams of a farther horizon, the longed-for tomorrow. This city, my home, living its narrative, is a silent actor in the tale of our lives, shaping us with an indelible mark each day.
 
-Antipolo – with its pulsating heart, warmed by the tropical sun, teeming with kindred souls – is more than just a city. It's an anchor, tethering me to my roots, under the shadow of the grand Cathedral, shaping my identity, fostering a place of belonging. The same streets that nurture Desmond's laughter, the markets enriching our daily table, the very air we breathe, each form a paragraph in the story of our existence.
+Antipolo – with its pulsating heart, warmed by the tropical sun, teeming with kindred souls – is more than just a city. It's an anchor, tethering me to my roots under the shadow of the grand Cathedral, shaping my identity, and fostering a place of belonging. The same streets that nurture Desmond's laughter, the markets enriching our daily table, and the very air we breathe each form a paragraph in the story of our existence.
 
-Joy, hope, dreams adorn the landscape, but so do struggles, fears, and unfulfilled yearnings. As I look at the starlit sky over Antipolo, Desmond's laughter syncopating with Argi's poetic musing, the narrative of Kamakawiwo'ole’s song echoes through my heart. It’s a tuneful recognition of life's dazzling moments interwoven with its somber shades of grey – much like the city enveloping us, much like life itself, each poignant note reverberating, whispering our collective affirmation, "Yes. What a wonderful world it is."
+Joy, hope, and dreams adorn the landscape, as do struggles, fears, and unfulfilled yearnings. As I look at the starlit sky over Antipolo, Desmond's laughter syncopating with Argi's poetic musing, the narrative of Kamakawiwo'ole's song echoes through my heart. It's a tuneful recognition of life's dazzling moments interwoven with its somber shades of grey – much like the city enveloping us, much like life itself, each poignant note reverberating, whispering our collective affirmation, "Yes. What a wonderful world it is."
 
-In the end, it's the symphony of laughter and tears, triumphs and tribulations, dreams realized and unfulfilled that tell our story. And through the chapters, across the verses, the city of Antipolo remains our silent companion, reflecting the universal harmonies of life's ever-changing song.
+Ultimately, the symphony of laughter and tears, triumphs and tribulations, dreams realized and unfulfilled tell our story. And through the chapters, across the verses, the city of Antipolo remains our silent companion, reflecting the universal harmonies of life's ever-changing song.

@@ -5,7 +5,7 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
-import Card from "@components/Card.astro";
+import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import slugify from "@utils/slugify";
@@ -31,7 +31,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         Peek into a vibrant kaleidoscope of thoughts imbued with joie de vivre,
         spiced with a quirky touch of wit and humor. Embark with me as we
         navigate the tumultuous seas of life, personal adventures, and
-        eccentricities. Secure your seat belts, as we embark on an unpredictable
+        eccentricities. Secure your seat belts as we embark on an unpredictable
         voyage through the delightfully whimsical landscape of my mind!
       </p>
       {
