@@ -33,6 +33,8 @@ Here, in the maelstrom of the ordinary where life often camouflages its meaning,
 
 There's a consistent thread of existence within me, a sense of unshakeable belonging to the world that pirouettes in celestial harmony and to the lullabies of everyday life thrumming with love and laughter. This sense of belonging delineates my joyous reality, and the waves of gratitude that ripple from it carve an indelible mark in the map of "us."
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/VqhCQZaH4Vs?si=bNfcAzOBt2sbM7vL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-container">
+  <iframe width="736" height="315" src="https://www.youtube.com/embed/VqhCQZaH4Vs?si=bNfcAzOBt2sbM7vL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 Every day, here we are, sum and parts, mangled into the intricate dance of life, cradled and liberated in its rhythm, feeling the pulse of profound moments. And in every twirl and pause, every rise and dip, I marvel at the masterpiece of life that is undeniably vibrant. Despite the trials and tribulations, I am here. We are here. And what an incredible world it is. From dawn to dusk, each day unravels its story, etching on the canvas of existence, the striking hues of life and love, textured with shared laughter and silent contemplation. A beautiful, endless marvel indeed. That's what life is all about.

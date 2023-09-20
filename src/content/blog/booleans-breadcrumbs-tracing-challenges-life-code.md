@@ -83,7 +83,9 @@ Heading home to our rented apartment, the vibrant laughter of my son Desmond and
 
 In the light of day and in the ['darkness of reality'](https://llego.dev/posts/embracing-dark-fathers-ode-love-acceptance/), life becomes an incessantly heavy load I can't unload. Richer by the day, hour, experiences, and responsibilities. These external burdens, just like the worries coded into the deep recesses of my mind, only seem to multiply, setting dominoes of thoughts tumbling. But with every strain, every screaming muscle, every code that refuses to work, every tear Desmond sheds, every worry in Argi Denise's eyes, every theme in Arlene's smile — I take those burdens, and like an old friend, I put them on my back.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/FFqb1I-hiHE?si=kFEG4gPhC3rMeNGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-container">
+    <iframe width="736" height="315" src="https://www.youtube.com/embed/FFqb1I-hiHE?si=kFEG4gPhC3rMeNGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 Late at night, wrecked by woes and ['battling demons of my own'](https://llego.dev/posts/echoes-evolution-dance-inner-demons/), I plunge into thought. Drawn towards the unknown, I find myself ['facing life's Carmen and the Deviling challenge side by side'](https://www.youtube.com/watch?v=FFqb1I-hiHE). Sirens of temptations ring in my ears; each code I write embraces a challenge. Each quiet disappointment Arlene masks with a smile reminds me of the devil lurking within my inadequacies. I chose to face them and said, "Hey, Carmen, come on," but just like life's challenges, Carmen has her path and leaves me alone to face mine.
 

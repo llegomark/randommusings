@@ -84,7 +84,9 @@ As twilight folds over Antipolo City, transforming the bustling day into a tranq
 
 Arlene, my love, is nestled on a nearby couch, engrossed in a Netflix movie while our children, Argi and Desmond, are locked in a round of robust laughter from playing Minecraft. As I watch them, my heart fills with a sentiment I can hardly fathom, lacing my intimations of mortality with a profound sense of love and connection.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/3iV_1ESMHaI?si=xr5BohjL1S5bHVE6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-container">
+    <iframe width="736" height="315" src="https://www.youtube.com/embed/3iV_1ESMHaI?si=xr5BohjL1S5bHVE6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 I muse on a Death Cab for Cutie song, 'I Will Follow You Into The Dark.' It profoundly connects to my soul, unearthing an eerie comfort within my heart.
 

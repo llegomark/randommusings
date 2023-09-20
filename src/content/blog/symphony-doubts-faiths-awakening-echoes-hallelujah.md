@@ -95,7 +95,9 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/YrLk4vdY28Q?si=_GGX53S0JaOe7aQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-container">
+    <iframe width="736" height="315" src="https://www.youtube.com/embed/YrLk4vdY28Q?si=_GGX53S0JaOe7aQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 The sorrow-saturated strains of Leonard Cohen's 'Hallelujah' filled my stark, cavernous room in the gloaming of an autumn twilight. I was raised in the sacred crevices of Catholicism, my faith woven with hymns, prayers, and profound reverence for the divine. But now, it seemed frayed and fraught. The echoes of my childhood convictions seemed anachronistic, an ill-fitting skin within the existential landscape where I stood at the cusp of a quarter-life crisis.
 

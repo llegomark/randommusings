@@ -11,7 +11,9 @@ ogImage: "https://llego.dev/assets/ffc5696f-77af-4243-aef5-a901a2c9e357.jpg"
 description: Explore the emotionally raw narrative of Mark, a 32-year-old software engineer grappling with depression, inspired by Kid Rock's song 'Only God Knows Why.' Learn about his journey, his struggles, and how music serves as his sanctuary.
 ---
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/0DQup4hd1_o?si=ngOn9CAQuyi6ziDN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-container">
+  <iframe width="736" height="315" src="https://www.youtube.com/embed/0DQup4hd1_o" title="Kid Rock - Only God Knows Why [Official Music Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 I'm Mark. As Kid Rock said, I'm just a man sitting here, trying to find myself, wading through the labyrinth of my mind. It feels like I'm constantly playing catch-up. _"I get behind myself, I need to remind myself,"_ as the song goes. These words echo through my soul, stirring feelings I often can't define.
 

@@ -11,7 +11,9 @@ ogImage: "https://llego.dev/assets/ff106ebc-fd8c-491a-ab1d-5670e8702e86.jpg"
 description: Explore deeply personal connections between music and self-expression in 'Melodic Introspection,' detailing a transformative journey through sound as it shapes identity. From the profound impact of Disturbed's 'The Sound of Silence' to reflecting life's spectrum of emotions through music, this soul-stirring narrative echoes the universal language of melodies and the unique reflections they hold within us.
 ---
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/u9Dg-g7t2l4?si=16nez1tdfxEdI-bB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-container">
+  <iframe width="736" height="315" src="https://www.youtube.com/embed/u9Dg-g7t2l4?si=16nez1tdfxEdI-bB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 The insightful melody of a song, the soulful strum of a guitar, and the comforting hum of a familiar tune have been faithful companions on my journey of self-expression. Each has spoken a language beyond words, resonating with my profound emotions.
 

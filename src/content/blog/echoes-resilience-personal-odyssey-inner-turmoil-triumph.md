@@ -11,7 +11,9 @@ ogImage: "https://llego.dev/assets/25eeca6d-8d2e-42ed-aca0-1f8d4b836d28.jpg"
 description: "Embark on an introspective journey with 'Echoes of My Evolution: A Dance with Inner Demons,' a narrative that explores personal growth, tackles inner struggles, and draws inspiration from R.E.M.'s iconic 'Losing My Religion.' Uncover a man's relentless pursuit for authenticity amid existential crisis, laden with profound self-discovery and resilience."
 ---
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/xwtdhWltSIg?si=NFgWB29VxBOfV23g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-container">
+  <iframe width="736" height="315" src="https://www.youtube.com/embed/xwtdhWltSIg?si=NFgWB29VxBOfV23g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 Seated in the sanctuary of solitude, my room's corner, the haunting echoes of R.E.M.'s 'Losing My Religion' seep from my laptop's speakers, stirring my contemplative silence. The lyrics of this iconic track reverberate within my confined space, casting an intensely reflective light on my winding journey, elevating the humdrum into a ['theater of introspection'](https://llego.dev/posts/the-sound-of-silence/).
 

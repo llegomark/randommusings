@@ -11,7 +11,9 @@ ogImage: "https://llego.dev/assets/91fd700c-dcab-47df-bd52-a9ba65f809d1.jpg"
 description: 'Dive into the vivid narrative of "Battle Cry of a Weary Cowboy" as we explore a poignant tale of a man wrestling with his past struggles symbolized as spurs while yearning for a peaceful future depicted as wings. Read how his resilient spirit resonates in his battle cry, "Yippee-ki-iy-ay," a symbol of endurance in the face of adversity.'
 ---
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/lXna1a-806Q?si=QMDMnSCeEiydO_hP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-container">
+  <iframe width="736" height="315" src="https://www.youtube.com/embed/lXna1a-806Q?si=QMDMnSCeEiydO_hP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 I'm torn between life and death, teetering on the edge. The mirror reflects the image of a man older than the 31 years he's lived. The lines of battle against both real and imagined demons carve deep furrows in my face. The imprint of my past - my choices and mistakes, the disappointments and losses - is indelible, a tattoo etched onto my soul.
 

@@ -11,7 +11,9 @@ ogImage: "https://llego.dev/assets/ffc2767a-d190-4ea3-bb72-8b8f15ba228f.jpg"
 description: Experience a powerful narrative of resilience amidst intergenerational poverty from a 31-year old Filipino man. A tale of dreams, hope, and struggle in fighting poverty, providing for a family, and overcoming depression, it emphasizes the enduring strength of the human spirit.
 ---
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/AIOAlaACuv4?si=EZN0fl5l8u1W1kXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-container">
+  <iframe width="736" height="315" src="https://www.youtube.com/embed/AIOAlaACuv4?si=EZN0fl5l8u1W1kXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 Seated in our shanty's chaotic yet familiar tranquility in the heart of the Philippines, I am often caught suspended in thought. My life has been a patchwork of earnest dreams, stubborn hope, and harsh realities.
 

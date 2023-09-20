@@ -11,7 +11,9 @@ ogImage: "https://llego.dev/assets/03c75654-756c-447b-b53d-79a654f798e4.jpg"
 description: Explore a heartfelt narrative of self-love and healing during difficult times, representing the struggles and triumphs inherent to the human experience. This personal letter, inspired by Coldplay's 'Fix You', underscores the importance of self-kindness and resilience amidst adversity.
 ---
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/k4V3Mo61fJM?si=vBFh74lKcfLEBFLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-container">
+  <iframe width="736" height="315" src="https://www.youtube.com/embed/k4V3Mo61fJM?si=vBFh74lKcfLEBFLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 Dear Mark,
 

@@ -105,7 +105,9 @@ The days swing by like a pendulum, their monotony broken sporadically by laughte
 
 The thought of change, the impending landslide, though, frightens me. I'd watched Desmond take his first steps in the living room of our rented apartment and saw Arlene's teary-eyed pride when Argi Denise won her first spelling bee. In these moments, the question strikes - "Can I handle the seasons of my life?"
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/WM7-PYtXtJM?si=iSBmkEMlC-tz5Rgq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-container">
+    <iframe width="736" height="315" src="https://www.youtube.com/embed/WM7-PYtXtJM?si=iSBmkEMlC-tz5Rgq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 Landslide. The metaphor lodges in my mind, fear grappling with the stubborn solace of routine. "Well, I've been afraid of changing 'cause I've built my life around you," I confess one night to Arlene. The children sleeping in the adjacent room, their soft breaths a lullaby to our nocturnal conversation. Her gentle gaze meets mine, her hand brushing away the worry lines on my forehead.
 

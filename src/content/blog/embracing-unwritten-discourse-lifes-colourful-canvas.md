@@ -15,69 +15,111 @@ description: "Dive into the inspiring journey of a man tracing life's unpredicta
 import matplotlib.pyplot as plt
 import numpy as np
 
-colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'brown']
+colors = ['red', 'sienna', 'goldenrod', 'olive', 'purple',
+          'cadetblue', 'turquoise']
 
-emotions = ["Mother's Love", "Yearning", "Uncertainty", "Fascination", "Metamorphosis", "Fatherhood", "Love and Unity"]
+emotions = [
+    "Mother's Love",
+    "Yearning",
+    "Uncertainty",
+    "Fascination",
+    "Metamorphosis",
+    "Fatherhood",
+    "Love and Unity"
+]
 
 x = np.random.rand(100)
 y = np.random.rand(100)
 
 emotion_indices = np.random.randint(0, len(emotions), size=100)
 
-plt.figure(figsize=(8, 6))
+fig, ax = plt.subplots(figsize=(8, 6))
+
+lines = []
+
 for i in range(len(emotions)):
     indices = np.where(emotion_indices == i)
-    plt.scatter(x[indices], y[indices], color=colors[i], label=emotions[i])
+    scatter = ax.scatter(x[indices], y[indices], color=colors[i], label=emotions[i])
+    ax.plot(x[indices], y[indices], color='gray', alpha=0.4)
+    lines.append(scatter)
 
 que_sera_x = 0.5
 que_sera_y = 0.5
-plt.text(que_sera_x, que_sera_y, "Que Sera, Sera", fontsize=12, ha='center', va='center', color='black', weight='bold')
 
-grandmother_x = 0.2
-grandmother_y = 0.3
-plt.scatter(grandmother_x, grandmother_y, color='purple', marker='D', s=100, label="Inay Nating")
+plt.text(
+    que_sera_x,
+    que_sera_y,
+    "Que Sera, Sera",
+    fontsize=12,
+    ha='center',
+    va='center',
+    color='black',
+    weight='bold'
+)
 
-grandfather_x = 0.8
-grandfather_y = 0.2
-plt.scatter(grandfather_x, grandfather_y, color='blue', marker='^', s=100, label="Itay Francing")
-
-mother_x = 0.4
-mother_y = 0.7
-plt.scatter(mother_x, mother_y, color='pink', marker='o', s=100, label="Mama Solmarie")
-
-legal_mother_x = 0.6
-legal_mother_y = 0.4
-plt.scatter(legal_mother_x, legal_mother_y, color='green', marker='P', s=100, label="Mama Lyn Lyn")
-
-computer_shop_x = 0.6
-computer_shop_y = 0.7
-plt.scatter(computer_shop_x, computer_shop_y, color='green', marker='s', s=100, label="Computer Shop")
-
-hidden_father_x = 0.4
-hidden_father_y = 0.05
-plt.scatter(hidden_father_x, hidden_father_y, color='white', edgecolors='black', marker='X', s=30, label="Hidden Father")
+plt.scatter(0.2, 0.3, color='salmon', marker='D', s=100, label="Inay Nating")
+plt.scatter(0.8, 0.2, color='yellowgreen', marker='^', s=100, label="Itay Francing")
+plt.scatter(0.4, 0.7, color='blue', marker='o', s=100, label="Mama Solmarie")
+plt.scatter(0.6, 0.4, color='pink', marker='o', s=100, label="Mama Lyn Lyn")
+plt.scatter(0.6, 0.7, color='slategray', marker='s', s=100, label="Computer Shop")
 
 family = {
-    "Arlene": (que_sera_x + np.random.uniform(-0.08, 0.08), que_sera_y + np.random.uniform(0.05, 0.15), 'yellow', 'heart', 150),
-    "Desmond": (que_sera_x + np.random.uniform(-0.08, 0.08), que_sera_y + np.random.uniform(0.05, 0.15), 'purple', 'o', 150),
-    "Argi": (que_sera_x + np.random.uniform(-0.08, 0.08), que_sera_y + np.random.uniform(0.05, 0.15), 'pink', 'o', 150)
+    "Arlene": (que_sera_x + np.random.uniform(-0.08, 0.08), que_sera_y + np.random.uniform(0.05, 0.15), 'cyan', 'heart', 150),
+    "Desmond": (que_sera_x + np.random.uniform(-0.08, 0.08), que_sera_y + np.random.uniform(0.05, 0.15), 'violet', 'o', 150),
+    "Argi": (que_sera_x + np.random.uniform(-0.08, 0.08), que_sera_y + np.random.uniform(0.05, 0.15), 'greenyellow', 'o', 150)
 }
 for name, (x, y, color, marker, size) in family.items():
     if marker == 'heart':
-        plt.scatter(x, y, color=color, marker=(104, 0, 0), s=size, label=name)  # Heart marker
+        plt.scatter(
+            x,
+            y,
+            color=color,
+            marker=(104, 0, 0),
+            s=size,
+            label=name
+        )
     else:
-        plt.scatter(x, y, color=color, marker=marker, s=size, label=name)
+        plt.scatter(
+            x,
+            y,
+            color=color,
+            marker=marker,
+            s=size,
+            label=name
+        )
 
-plt.legend(loc='upper left')
+annotations = {
+    "Basey, Samar": (0.27, 0.88),
+    "Antipolo City": (0.5, 0.15),
+    "Nursing": (0.35, 0.4),
+    "Computer Shop": (0.68, 0.68),
+    "Fatherhood": (0.25, 0.25),
+    "Love and Unity": (0.65, 0.1)
+}
+
+for annotation, position in annotations.items():
+    ax.annotate(
+        annotation,
+        position,
+        xycoords='figure fraction',
+        fontsize=10,
+        ha='center'
+    )
+
+plt.legend(
+    loc='center left',
+    bbox_to_anchor=(1, 0.5),
+    title="Legend"
+)
 plt.title("Vibrant Tapestry of Life")
 plt.xlabel("X Coordinate")
 plt.ylabel("Y Coordinate")
 
+plt.tight_layout()
 plt.show()
-
 ```
 
-![Que Sera, Sera](https://llego.dev/assets/queserasera.png)
+![Que Sera, Sera](https://llego.dev/assets/queserasera-1.png)
 
 Stepping into the quiet of our Antipolo City apartment, <a href= "https://youtu.be/r0m9wr_o0Qg?si=vM1oyQujCKtv6nFa" target= "_blank"> "Whatever Will Be, Will Be (Que Sera, Sera)"</a> cradles my senses, awakening memories that dance through the years. Sit beside me, and let me share my story with you.
 
@@ -92,7 +134,9 @@ An image of him, a vague outline drawn from the whispered stories of elders and 
 
 At the crossroads of my youth, I made the leap from the coconut-laden coasts of Samar to the pulsing heart of Antipolo City. This sudden shift in my world was a step taken hand in hand with my grandparents while Mama, a public school teacher, stayed behind in Basey.
 
-As the hands of time turned, engulfing the lawyer dreams of my childhood, they revealed a new, unexpected path — nursing. My Tita, my legal mother, sketched it into existence on paper. But as I ventured down the road, the shadows of dissatisfaction and limited opportunities slowly blurred my path.
+When I was young, my dream was to become a lawyer. However, time led me to pursue a different path - nursing. It wasn't inspired by a childhood dream but rather for practical purposes. My Tita, my legal mother, suggested this track due to the high demand and job security in nursing.
+
+Even though I embarked on this journey with pure intentions, I soon felt confined rather than free. My decision became a restriction rather than a choice, and the promising opportunities faded, creating uncertainty and discontent.
 
 Amidst these uncertainties, one place was my constant — the "Info Station Computer Rentals," owned by my legal parents. Becoming a regular face at the computer shop since my arrival in Antipolo, it was more than just a place of casual convenience or business. The haven introduced me to a realm beyond nursing, beyond textbooks.
 
@@ -113,4 +157,6 @@ Pausing now and looking back, my life seems a vibrant tapestry of mixed hues. Ea
 
 So, let's raise a toast to life—its uncertainties, surprising plot twists, and the colors it paints us in. Much like Doris Day melodiously taught us, **Que Sera, Sera.** Embracing life's beautiful uncertainties, dancing to its distinct rhythm, and creating our melody in this grand symphony are all part of this journey. For in the end, **whatever will be will be.**
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/r0m9wr_o0Qg?si=qs2oOxKdE5t2KF8f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-container">
+    <iframe width="736" height="315" src="https://www.youtube.com/embed/r0m9wr_o0Qg?si=qs2oOxKdE5t2KF8f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>

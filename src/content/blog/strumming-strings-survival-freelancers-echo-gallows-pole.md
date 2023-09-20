@@ -11,7 +11,9 @@ ogImage: "https://llego.dev/assets/6183f54b-e5d1-4fba-8de7-6f8af20e5fa2.jpg"
 description: "Delve into the poignant narrative of a struggling freelance software engineer knitted with the echoes of 'Gallows Pole.' Experience his journey marked by hardships, sacrifice, and resilient hope."
 ---
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/NedEQ6sHloE?si=qE06ZayrQTEWr9HD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="video-container">
+  <iframe width="736" height="315" src="https://www.youtube.com/embed/NedEQ6sHloE?si=qE06ZayrQTEWr9HD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 Each guitar strum echoes off the sparse walls of my cramped living space, resonating a melancholy soundtrack to my lonely existence as a 31-year-old freelance software engineer. The late-night silence, accentuating the soft jingle of my old cowboy spurs, reverberates within the confines of these walls like the dull throb of a headache. It's not just the sound of my struggle but the essence of Willie Watson's rendition of "Gallows Pole," a melody that reverberates with the approaching doom, desperation, betrayal, and the disparity of power and poverty.
 

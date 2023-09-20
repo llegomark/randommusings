@@ -30,7 +30,7 @@
   }
   body {
     @apply flex min-h-screen flex-col bg-skin-fill font-mono text-skin-base 
-    transition-colors selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
+    selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
   section,
   footer {
@@ -89,6 +89,20 @@
   .prose h2#table-of-contents + p {
     @apply hidden;
   }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (height divided by width) */
+    padding-top: 30px; /* Optional: Add some spacing above the video */
+    height: 0;
+    overflow: hidden;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
   /* ===== scrollbar ===== */
   html {
@@ -116,7 +130,7 @@
   }
 
   code {
-    white-space: pre-wrap;
+    white-space: pre;
     overflow: scroll;
   }
 }
