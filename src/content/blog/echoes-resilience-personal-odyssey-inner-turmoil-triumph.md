@@ -3,7 +3,7 @@ author: Mark Anthony Llego
 pubDatetime: 2023-09-15T01:12:18Z
 title: "Echoes of My Evolution: A Dance with Inner Demons"
 postSlug: echoes-evolution-dance-inner-demons
-featured: true
+featured: false
 draft: false
 tags:
   - personal

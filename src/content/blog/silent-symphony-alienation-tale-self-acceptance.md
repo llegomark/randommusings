@@ -149,8 +149,6 @@ for index, person in enumerate(people):
     person.save_state(f'person_{index}_state.pickle')
 ```
 
-<a href="https://colab.research.google.com/drive/11aeZXJq14LPMWe-iKOPkQfsOevUHKXHQ?usp=sharing" target="_blank">Run the code on Google Colab</a>
-
 Every day felt like a quest, an agonizing journey towards self-acceptance and belonging. I was treading on a path that seemed more like quicksand than solid ground, each cautious step drawing me deeper into the icy chasm of self-doubt, loneliness, and alienation. A depth where comfort was a foreign concept, and emulating the melody of <a href="https://www.youtube.com/watch?v=XFkzRNyygfk" target="_blank">Radiohead's "Creep,"</a> my heart echoed, "I'm a creep, I'm a weirdo. What the hell am I doing here? I don't belong here."
 
 My eyes darted from face to face, each a stark reminder of a world I didn't belong to. A world that seemed to glide effortlessly in the sunshine while my existence trailed behind in shadows. Everyone seemed so radiant, so enviably perfect, that their brilliance numbed my vision. I was a mere silhouette within their spectral glow, ['yearning to be seen, to be noticed'](https://llego.dev/posts/unseen-tapestry-souls-quest-authentic-recognition/). However, my anxieties continuously buried me within unseen corners.

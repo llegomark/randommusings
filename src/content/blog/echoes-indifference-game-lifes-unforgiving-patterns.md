@@ -94,11 +94,11 @@ The boy who once participated in youthful pranks at the county picture show beca
 
 As life overwhelmingly transitions from innocent explorations to harsh adversities, we collide against society's stormy indifference. We mimic Conway's living cells pattern, which relies on surroundings to survive, each stirring consequences in the immediate neighborhood. A supportive society should provide an empathetic network, allowing the individual's struggles to meet the wind of understanding and not be doomed to ricoche off the unsympathetic cliffs of judgment.
 
+The unspoken story of Billie Joe gradually lost its prominence in everyday conversations, leaving a trail of muted sorrows and unanswered questions. It unfolded as a cautionary tale about the delicacy of the human spirit and the hazards of isolation. We exchange spaces and moments, often remaining heedless of the silent cries for help, the battles fought behind smiles, and the part of us that yearns for empathy and acceptance. Unless we scrub away the thick layer of indifference, we all are potential Billie Joes awaiting recognition.
+
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/HaRacIzZSPo?si=wa-JktTb3LVTkuE_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-
-The unspoken story of Billie Joe gradually lost its prominence in everyday conversations, leaving a trail of muted sorrows and unanswered questions. It unfolded as a cautionary tale about the delicacy of the human spirit and the hazards of isolation. We exchange spaces and moments, often remaining heedless of the silent cries for help, the battles fought behind smiles, and the part of us that yearns for empathy and acceptance. Unless we scrub away the thick layer of indifference, we all are potential Billie Joes awaiting recognition.
 
 As we journey onward, the third of June etches onto calendars with new memories, washing away remnants of past revelations. The unmoved world spins forward in its dictated orbit, much like Conway's Game of Life operates without any intervention. The player initiates the game and watches as myriad patterns evolve, each transition encapsulating the fluorescence of existence.
 

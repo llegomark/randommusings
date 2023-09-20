@@ -44,7 +44,8 @@ So here's to a joint voyage that weaves together technology, whimsical thoughts,
 
 While I highly regard privacy and maintain a sensible digital footprint, I understand the importance of accessibility when it comes to professional engagements. Therefore, while my resume and portfolio aren't publicly accessible, they are readily shared with interested parties aligned with potential opportunities.
 
-In addition to my regular pursuits, I'm also available for freelance projects. Feel free to reach out if you're interested in collaborating or need expert assistance with your project! You can contact me via email at [markllego@gmail.com](mailto:markllego@gmail.com).
+In addition to my regular pursuits, I'm also available for freelance projects. Feel free to reach out if you're interested in collaborating or need expert assistance with your project!
+
 I look forward to working together to create intelligent, innovative solutions.
 
 ## Pricing for Freelance Services
@@ -55,4 +56,12 @@ Understanding the value of transparent pricing, I provide an estimated range for
 - **Intermediate Projects**: Starting from Php 2,300.00 per hour/project. Suited for more complex tasks, including full-stack web development, AI model development, and larger bug fixes.
 - **Advanced Projects**: Starting from Php 4,000.00 per hour/project. Perfect for extensive projects that require a deep dive into advanced AI model development, intricate full-stack web application development, or large-scale optimization tasks.
 
-Please note that these prices are only baseline estimates. For precise quotes tailored to your needs, please contact [markllego@gmail.com](mailto:markllego@gmail.com).
+Please note that these prices are only baseline estimates.
+
+## Contact Details
+
+You can reach me for work-related inquiries through the following channels:
+
+- Email: markllego@gmail.com
+- Mobile Number: 09919790048
+- Twitter: @markllego

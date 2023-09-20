@@ -3,7 +3,7 @@ author: Mark Anthony Llego
 pubDatetime: 2023-09-19T00:38:08Z
 title: "Embracing the Unwritten: A Discourse on Life's Colourful Canvas"
 postSlug: embracing-unwritten-discourse-lifes-colourful-canvas
-featured: true
+featured: false
 draft: false
 tags:
   - personal
