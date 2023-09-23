@@ -63,6 +63,10 @@ if __name__ == "__main__":
 
 ```
 
+<div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HrxX9TBj2zY?si=-u8531iJo6KtemMd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
 As the golden hues of the day surrender to twilight, I find myself caught in a constant battle. The expectations placed upon me by societal norms weigh heavily—being a faithful son, a devoted partner, and a father of two. Yet beneath these labels, a sea of rebellion surges within me, resisting the perpetual pressure to conform to the prefabricated mold that society has drawn for me.
 
 The ghost of my children weaving innocent tales amidst shadows of laughter echoes in my heart. Their unbroken spirit, unmarred by societal orthodoxies, brings forth an ['image of myself'](https://llego.dev/posts/silent-symphony-alienation-tale-self-acceptance/) before life added bricks — birthed forth by redundant societal norms.

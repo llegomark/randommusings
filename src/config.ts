@@ -3,7 +3,7 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://llego.dev/",
   author: "Mark Anthony Llego",
-  desc: "A vivid kaleidoscope of thoughts, joie de vivre, and a quirky sprinkle of wit and humor. Join me as I navigate the tumultuous seas of life, personal adventures, and craziness. Fasten your seat belts, as we about to depart on an unexpected journey through the ridiculously whimsical landscape of my mind!",
+  desc: "I am Mark Anthony Llego, standing at the exciting crossroads of coding and life. I am a freelance software engineer, blending my passion for artificial intelligence, specifically natural language processing and large language models, into a career aimed at transforming everyday experiences.",
   title: "llego.dev",
   ogImage: "8cef457e-9c69-43ce-a1ff-33799ee92efc.jpg",
   lightAndDarkMode: true,

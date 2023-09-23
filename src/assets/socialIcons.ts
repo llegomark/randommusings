@@ -209,10 +209,10 @@ const socialIcons: SocialIcons = {
   q-46 -22 -127 -33q-74 -10 -166 -11h-3zM367 267q73 0 109 56l24 39l24 -39q36 -56 109 -56q63 0 101 43t38 117v239h-95v-232q0 -74 -61 -74q-69 0 -69 88v127h-94v-127q0 -88 -69 -88q-61 0 -61 74v232h-95v-239q0 -74 38 -117t101 -43z" />
   </svg>`,
   RSS: `<svg class="icon-tabler" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round">
-    <path fill="currentColor" d="M4 11a9 9 0 0 1 9 9"></path>
-    <path fill="currentColor" d="M4 4a16 16 0 0 1 16 16"></path>
-    <circle fill="currentColor" cx="5" cy="19" r="1"></circle>
-  </svg>`,
+  <path fill="currentColor" d="M4 11a9 9 0 0 1 9 9"></path>
+  <path fill="currentColor" d="M4 4a16 16 0 0 1 16 16"></path>
+  <circle fill="currentColor" cx="5" cy="19" r="1"></circle>
+</svg>`,
 };
 
 export default socialIcons;
